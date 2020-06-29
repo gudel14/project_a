@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Dashboard_Activity"
+    android:background="#fff"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:background="@color/gray"
+        android:layout_width="match_parent"
+        android:layout_height="250dp">
+    </RelativeLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="200dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+                <GridLayout
+                    android:columnOrderPreserved="false"
+                    android:alignmentMode="alignMargins"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:rowCount="3"
+                    android:columnCount="2">
+
+                    //-------------------------------------Update wp-------------------//
+                    <androidx.cardview.widget.CardView
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    app:cardUseCompatPadding="true"
+                    app:cardElevation="12dp"
+                    app:cardCornerRadius="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_gravity="center"
+                            android:orientation="vertical"
+                            android:padding="26dp"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <ImageView
+                                android:src="@drawable/water"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp">
+                            </ImageView>
+                            <TextView
+                                android:text="selamat"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                            </TextView>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+
+                    //-------------------------------------Update TL-------------------//
+                    <androidx.cardview.widget.CardView
+                        android:layout_columnWeight="1"
+                        android:layout_rowWeight="1"
+                        app:cardUseCompatPadding="true"
+                        app:cardElevation="12dp"
+                        app:cardCornerRadius="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:padding="26dp"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <ImageView
+                                android:src="@drawable/water"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp">
+                            </ImageView>
+                            <TextView
+                                android:text="selamat"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                            </TextView>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+
+                    //-------------------------------------LAPORAN WP-------------------//
+                    <androidx.cardview.widget.CardView
+                        android:layout_columnWeight="1"
+                        android:layout_rowWeight="1"
+                        app:cardUseCompatPadding="true"
+                        app:cardElevation="12dp"
+                        app:cardCornerRadius="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_gravity="center"
+                            android:orientation="vertical"
+                            android:padding="26dp"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <ImageView
+                                android:src="@drawable/water"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp">
+                            </ImageView>
+                            <TextView
+                                android:text="selamat"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                            </TextView>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+
+                    //-------------------------------------LAPORAN TL-------------------//
+                    <androidx.cardview.widget.CardView
+                        android:layout_columnWeight="1"
+                        android:layout_rowWeight="1"
+                        app:cardUseCompatPadding="true"
+                        app:cardElevation="12dp"
+                        app:cardCornerRadius="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:padding="26dp"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <ImageView
+                                android:src="@drawable/water"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp">
+                            </ImageView>
+                            <TextView
+                                android:text="selamat"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                            </TextView>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    //-------------------------------------TENTANG-------------------//
+                    <androidx.cardview.widget.CardView
+                        android:layout_columnWeight="1"
+                        android:layout_rowWeight="1"
+                        app:cardUseCompatPadding="true"
+                        app:cardElevation="12dp"
+                        app:cardCornerRadius="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_gravity="center"
+                            android:orientation="vertical"
+                            android:padding="26dp"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <ImageView
+                                android:src="@drawable/water"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp">
+                            </ImageView>
+                            <TextView
+                                android:text="selamat"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                            </TextView>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+
+                    //-------------------------------------KELUAR-------------------//
+                    <androidx.cardview.widget.CardView
+                        android:layout_columnWeight="1"
+                        android:layout_rowWeight="1"
+                        app:cardUseCompatPadding="true"
+                        app:cardElevation="12dp"
+                        app:cardCornerRadius="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:padding="26dp"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <ImageView
+                                android:src="@drawable/water"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp">
+                            </ImageView>
+                            <TextView
+                                android:text="selamat"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                            </TextView>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+
+
+
+                </GridLayout>
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>
