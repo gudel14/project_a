@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_wpinput"
+        android:title="WP INPUT"
+        android:icon="@drawable/input"/>
+
+    <item
+        android:id="@+id/nav_wpupdate"
+        android:title="WP UPDATE"
+        android:icon="@drawable/update"/>
+
+    <item
+        android:id="@+id/nav_wpcloud"
+        android:title="WP CLOUD"
+        android:icon="@drawable/cloud"/>
+
+</menu>

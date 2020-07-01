@@ -32,7 +32,6 @@ class LoginActivity : AppCompatActivity() {
             startActivity(Intent(this, Daftar_Activity::class.java))
         }
 
-
         //metode tombol masuk
         btn_masuk.setOnClickListener {
             if (log_nrp.text.toString().isEmpty()) {
@@ -47,8 +46,6 @@ class LoginActivity : AppCompatActivity() {
             }
             ceklogin (log_nrp.text.toString(), log_pass.text.toString())
         }
-
-
     }
 
     private fun ceklogin(nrp: String, pass: String) {
@@ -65,12 +62,10 @@ class LoginActivity : AppCompatActivity() {
                     } else {
                         intent= Intent(applicationContext, Dashboard_Activity::class.java)
                         startActivity(intent)
-                           Toast.makeText(this@LoginActivity, "Login Berhasil", Toast.LENGTH_SHORT).show()
-
-
+                        Toast.makeText(this@LoginActivity, "Login Berhasil", Toast.LENGTH_SHORT).show()
+                        finish()
                         }
                     }
-
             })
     }
 }

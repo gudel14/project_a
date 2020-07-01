@@ -11,6 +11,7 @@ import com.example.project_a.R
 import com.example.project_a.RequestHandler
 import com.example.project_a.Retrofit.RetrofitClient
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.AsyncTask
 
 class Input_Activity : AppCompatActivity(), View.OnClickListener {
@@ -19,8 +20,7 @@ class Input_Activity : AppCompatActivity(), View.OnClickListener {
     private var editstatus:EditText?=null
     private var editshift:EditText?=null
     private var btn_save:Button?=null
-
-
+    private var btn_view:Button?=null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,6 +30,9 @@ class Input_Activity : AppCompatActivity(), View.OnClickListener {
         editstatus= findViewById(R.id.input_status)as EditText
         editshift= findViewById(R.id.input_shift)as EditText
         btn_save = findViewById(R.id.btn_save)as Button
+        btn_view = findViewById(R.id.btn_view)
+
+        btn_view!!.setOnClickListener(this)
 
         btn_save!!.setOnClickListener (this)
     }
@@ -58,18 +61,19 @@ class Input_Activity : AppCompatActivity(), View.OnClickListener {
 
                 val rh = RequestHandler()
                 return rh.sendPostRequest(RetrofitClient.urlad,params)
-
             }
-
         }
-
         val aw = Addwp()
         aw.execute()
     }
 
     override fun onClick(v: View?) {
-        if (v === btn_save){
+        if (v=== btn_save){
             addWp()
         }
+        if (v === btn_view){
+            startActivity(Intent(this, TampilSemuaWpActivity::class.java))
+        }
     }
+
 }
