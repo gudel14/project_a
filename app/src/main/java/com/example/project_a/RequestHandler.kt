@@ -10,7 +10,7 @@ import javax.net.ssl.HttpsURLConnection
 
 class RequestHandler {
     fun sendPostRequest(
-        requestURL: String ,
+        requestURL: String,
         postDataParams: java.util.HashMap<String , String?>
     ): String {
         val url: URL
@@ -56,7 +56,7 @@ class RequestHandler {
         return sb.toString()
     }
 
-    fun sendGetRequest(requestURL: String): String {
+    fun sendGetRequest(requestURL: String, id: String?): String {
         val sb = StringBuilder()
         try {
             val url = URL(requestURL)

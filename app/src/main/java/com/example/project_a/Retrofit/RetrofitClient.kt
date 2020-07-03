@@ -19,6 +19,8 @@ object RetrofitClient {
         }
     val urlad ="http://192.168.43.130/project_a/input_wp.php"
     val urlgetall = "http://192.168.43.130/project_a/tampilsemuawp.php"
+    val urlgetwp ="http://192.168.43.130/project_a/tampilwp.php"
+    val urldeletewp ="http://192.168.43.130/project_a/hapuswp.php"
     val KEY_WP_ID = "id"
     val KEY_WP_WP = "water_pump"
     val KEY_WP_status = "status"
@@ -30,4 +32,6 @@ object RetrofitClient {
     val TAG_STATUS = "status"
     val TAG_SHIFT = "shift"
     val WP_ID = "wp_id"
+
+
 }

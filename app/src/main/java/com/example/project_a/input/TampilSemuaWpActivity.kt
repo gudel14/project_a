@@ -6,14 +6,13 @@ import android.os.AsyncTask
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.view.ViewParent
 import android.widget.AdapterView
 import android.widget.ListView
 import android.widget.SimpleAdapter
-import android.widget.Toast
 import com.example.project_a.R
 import com.example.project_a.RequestHandler
 import com.example.project_a.Retrofit.RetrofitClient
+import kotlinx.android.synthetic.main.list_item.*
 import org.json.JSONException
 import org.json.JSONObject
 import java.util.ArrayList
@@ -23,6 +22,7 @@ class TampilSemuaWpActivity : AppCompatActivity(), AdapterView.OnItemClickListen
 
     private var listView : ListView? = null
     private var JSON_STRING: String? = null
+    private var id:String?=null
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -81,10 +81,9 @@ class TampilSemuaWpActivity : AppCompatActivity(), AdapterView.OnItemClickListen
                 JSON_STRING = s
                 tampil()
             }
-            override fun doInBackground (vararg v : Void): String{
-
+            override fun doInBackground (vararg params : Void): String{
                 val rh = RequestHandler()
-                return rh.sendGetRequest(RetrofitClient.urlgetall)
+                return rh.sendGetRequest(RetrofitClient.urlgetall,id)
             }
         }
         val gj = GET_JSON()

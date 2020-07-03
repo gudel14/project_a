@@ -30,7 +30,7 @@ class Input_Activity : AppCompatActivity(), View.OnClickListener {
         editstatus= findViewById(R.id.input_status)as EditText
         editshift= findViewById(R.id.input_shift)as EditText
         btn_save = findViewById(R.id.btn_save)as Button
-        btn_view = findViewById(R.id.btn_view)
+        btn_view = findViewById(R.id.btn_view)as Button
 
         btn_view!!.setOnClickListener(this)
 
@@ -51,10 +51,10 @@ class Input_Activity : AppCompatActivity(), View.OnClickListener {
             override fun onPostExecute (s:String){
                 super.onPostExecute(s)
                 loading.dismiss()
-                Toast.makeText ( this@Input_Activity , s,Toast.LENGTH_SHORT).show()
+                Toast.makeText ( this@Input_Activity , s, Toast.LENGTH_SHORT).show()
             }
             override fun doInBackground (vararg v : Void): String{
-                val params= HashMap<String,String?>()
+                val params= HashMap<String, String?>()
                 params [RetrofitClient.KEY_WP_WP]=waterpump
                 params [RetrofitClient.KEY_WP_shift]=shift
                 params [RetrofitClient.KEY_WP_status]=status
