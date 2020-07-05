@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.project_a.R
 import com.example.project_a.RequestHandler
 import com.example.project_a.Retrofit.RetrofitClient
+import com.example.project_a.input.Input_Activity
 import kotlinx.android.synthetic.main.item_list.view.*
 import org.jetbrains.anko.db.delete
 import org.jetbrains.anko.startActivity
@@ -51,11 +52,14 @@ class RVAdapter(val context: Context, val items: ArrayList<Pompa>)
             itemView.update_btnpush.setOnClickListener{
                 itemView.context.database.use {
 
-
                 }
             }
 
         }
+    }
+
+    private fun push(){
+//        addWp()
     }
 
 

@@ -17,16 +17,17 @@
         <activity android:name=".pompa.Pompa2Activity">
         </activity>
         <activity android:name=".pompa.PompaActivity">
-
-        </activity>
-        <activity android:name=".input.TampilWpActivity" />
-        <activity android:name=".input.TampilSemuaWpActivity" />
-        <activity android:name=".input.Input_Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+        </activity>
+        <activity android:name=".input.TampilWpActivity" />
+        <activity android:name=".input.TampilSemuaWpActivity" />
+        <activity android:name=".input.Input_Activity">
+
         </activity>
         <activity android:name=".Dashboard_Activity" />
         <activity android:name=".Daftar_Activity" />

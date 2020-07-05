@@ -1,6 +1,9 @@
 package com.example.project_a.input
 
+import android.app.AlertDialog
 import android.app.ProgressDialog
+import android.content.DialogInterface
+import android.content.Intent
 import android.os.AsyncTask
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -12,6 +15,7 @@ import com.example.project_a.R
 import com.example.project_a.RequestHandler
 import com.example.project_a.Retrofit.RetrofitClient
 import kotlinx.android.synthetic.main.activity_tampil_wp.*
+import org.jetbrains.anko.AlertDialogBuilder
 import org.json.JSONException
 import org.json.JSONObject
 
@@ -21,9 +25,11 @@ class TampilWpActivity : AppCompatActivity(), View.OnClickListener {
     private var wp :EditText?=null
     private var shift :EditText?=null
     private var status :EditText?=null
+
     private var edit:Button?=null
-    private var id:String?=null
     private var hapus:Button?=null
+
+    private var id:String?=null
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,31 +37,30 @@ class TampilWpActivity : AppCompatActivity(), View.OnClickListener {
         setContentView(R.layout.activity_tampil_wp)
 
         val intent=intent
+
         id=intent.getStringExtra(RetrofitClient.WP_ID)
 
         id_id=findViewById(R.id.tampil_id)as EditText
         wp=findViewById(R.id.tampil_wp)as EditText
         shift=findViewById(R.id.tampil_shift)as EditText
         status=findViewById(R.id.tampil_status)as EditText
+
         edit=findViewById(R.id.tampil_btnedit)as Button
         hapus=findViewById(R.id.tampil_btnhapus)as Button
 
 
         edit!!.setOnClickListener(this)
         hapus!!.setOnClickListener(this)
+
         id_id!!.setText(id)
+
         getTampilWp()
-
-
-
-
     }
 
     fun getTampilWp (){
 
-        lateinit var loading: ProgressDialog
         class getTampil: AsyncTask<Void, Void, String>(){
-
+            lateinit var loading: ProgressDialog
             override fun onPreExecute() {
                 super.onPreExecute()
                 loading=ProgressDialog.show(this@TampilWpActivity, "menampilkan", "tunggu", false,false)
@@ -70,7 +75,7 @@ class TampilWpActivity : AppCompatActivity(), View.OnClickListener {
 
             override fun doInBackground(vararg params: Void): String {
                 val rh = RequestHandler()
-                return rh.sendGetRequest(RetrofitClient.urlgetwp,id)
+                return rh.sendGetRequestParam(RetrofitClient.urlgetwp,id)
             }
         }
         val get = getTampil()
@@ -83,7 +88,7 @@ class TampilWpActivity : AppCompatActivity(), View.OnClickListener {
             val jsonObject=JSONObject(json)
             val result = jsonObject.getJSONArray(RetrofitClient.TAG_JSON_ARRAY)
             val jo = result.getJSONObject(0)
-            val idd = jo.getString(RetrofitClient.TAG_ID)
+//            val idd = jo.getString(RetrofitClient.TAG_ID)
             val wpp = jo.getString(RetrofitClient.TAG_WP)
             val shiftt = jo.getString(RetrofitClient.TAG_SHIFT)
             val statuss = jo.getString(RetrofitClient.TAG_STATUS)
@@ -98,15 +103,7 @@ class TampilWpActivity : AppCompatActivity(), View.OnClickListener {
         }
     }
 
-    override fun onClick(p0: View?) {
-        if (p0=== tampil_btnedit){
 
-        }
-        if (p0=== tampil_btnhapus) {
-            hapuswp()
-        }
-
-    }
     fun hapuswp() {
         class hapuss : AsyncTask<Void, Void, String>() {
 
@@ -124,14 +121,90 @@ class TampilWpActivity : AppCompatActivity(), View.OnClickListener {
 
             }
 
-            override fun doInBackground(vararg p0: Void?): String {
+            override fun doInBackground(vararg params: Void?): String {
                 val rh = RequestHandler()
-                return rh.sendGetRequest(RetrofitClient.urldeletewp, id)
+                return rh.sendGetRequestParam(RetrofitClient.urldeletewp, id)
+                //catt error : sendGetRequest -> diganti dg sendgetRequestParam (params)
             }
         }
         val hapus = hapuss()
         hapus.execute()
     }
+
+    private fun konfirmHapus (){
+        val alertDialogBuilder= AlertDialog.Builder(this)
+        alertDialogBuilder.setMessage("Are U sure delete to data ?")
+        alertDialogBuilder.setPositiveButton("ya") { arg0, arg1 ->
+            hapuswp()
+            val i = Intent(Intent(this@TampilWpActivity, TampilSemuaWpActivity::class.java))
+            startActivity(i)
+            finish()
+        }
+
+        alertDialogBuilder.setNegativeButton("tidak", object :DialogInterface.OnClickListener{
+                override fun onClick(arg0:DialogInterface, arg1:Int){
+
+                }
+            })
+
+            val alertDialog = alertDialogBuilder.create()
+            alertDialog.show()
+
+
     }
+
+
+    fun updatewp(){
+
+        val update_wp = wp?.getText().toString().trim(){ it <= ' ' }
+        val update_shift = shift?.getText().toString().trim(){ it <= ' ' }
+        val update_status = status?.getText().toString().trim(){ it <= ' ' }
+
+
+        class update : AsyncTask<Void, Void, String>(){
+            lateinit var loading: ProgressDialog
+            override fun onPreExecute() {
+                super.onPreExecute()
+                loading =  ProgressDialog.show(this@TampilWpActivity, "mengupdate", "tunggu", false, false)
+            }
+
+            override fun onPostExecute(result: String?) {
+                super.onPostExecute(result)
+                loading.dismiss()
+                Toast.makeText(this@TampilWpActivity,result , Toast.LENGTH_LONG).show()
+                val i = Intent(Intent(this@TampilWpActivity, TampilSemuaWpActivity::class.java))
+                startActivity(i)
+                finish()
+            }
+
+            override fun doInBackground(vararg p0: Void?): String {
+                val params= HashMap<String, String?>()
+                params [RetrofitClient.KEY_WP_ID] = id
+                params [RetrofitClient.KEY_WP_WP]= update_wp
+                params [RetrofitClient.KEY_WP_shift]=update_shift
+                params [RetrofitClient.KEY_WP_status]= update_status
+
+                val rh = RequestHandler()
+                return rh.sendPostRequest(RetrofitClient.urlupdatewp, params)
+
+            }
+        }
+        val uu = update()
+        uu.execute()
+    }
+
+
+    override fun onClick(p0: View?) {
+        if (p0=== tampil_btnedit){
+            updatewp()
+
+        }
+        if (p0=== tampil_btnhapus) {
+            konfirmHapus()
+        }
+
+    }
+}
+
 
 

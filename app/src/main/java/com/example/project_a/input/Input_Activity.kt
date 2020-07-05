@@ -14,17 +14,22 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.AsyncTask
 
-class Input_Activity : AppCompatActivity(), View.OnClickListener {
+open class Input_Activity : AppCompatActivity(), View.OnClickListener {
 
-    private var editwp:EditText?=null
-    private var editstatus:EditText?=null
-    private var editshift:EditText?=null
-    private var btn_save:Button?=null
-    private var btn_view:Button?=null
+
+
+
+        private var editwp:EditText?=null
+        private var editstatus:EditText?=null
+        private var editshift:EditText?=null
+        private var btn_save:Button?=null
+        private var btn_view:Button?=null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.input_activity)
+
+
 
         editwp= findViewById(R.id.input_wp)as EditText
         editstatus= findViewById(R.id.input_status)as EditText

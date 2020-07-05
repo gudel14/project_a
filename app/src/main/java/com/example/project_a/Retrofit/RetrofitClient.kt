@@ -17,11 +17,13 @@ object RetrofitClient {
             }
             return retrofit !!
         }
-    val urlad ="http://192.168.43.130/project_a/input_wp.php"
-    val urlgetall = "http://192.168.43.130/project_a/tampilsemuawp.php"
-    val urlgetwp ="http://192.168.43.130/project_a/tampilwp.php"
-    val urldeletewp ="http://192.168.43.130/project_a/hapuswp.php"
-    val KEY_WP_ID = "id"
+    val urlad ="http://192.168.43.131/project_a/input_wp.php"
+    val urlgetall = "http://192.168.43.131/project_a/tampilsemuawp.php"
+    val urlgetwp ="http://192.168.43.131/project_a/tampilwp.php?id="
+    val urldeletewp ="http://192.168.43.131/project_a/hapuswp.php?id="
+    val urlupdatewp ="http://192.168.43.131/project_a/updatewp.php?id="
+    //yg ke 2 : karna kita select nya per ID di field tabel, jadi kita tambah url nya pakai id (yg di deklarasikan di ApiService)
+    const val KEY_WP_ID = "id"
     val KEY_WP_WP = "water_pump"
     val KEY_WP_status = "status"
     val KEY_WP_shift = "shift"

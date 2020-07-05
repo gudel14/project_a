@@ -16,6 +16,11 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    android {
+        compileSdkVersion 30
+        buildToolsVersion "25.0.2"
+    }
+
     buildTypes {
         release {
             minifyEnabled false
