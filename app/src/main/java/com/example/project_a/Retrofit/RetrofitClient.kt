@@ -32,6 +32,7 @@ object RetrofitClient {
     val KEY_WP_status = "status"
     val KEY_WP_shift = "shift"
     val KEY_WP_hm = "hm"
+    val KEY_WP_tanggal = "tanggal"
 
     val TAG_JSON_ARRAY = "result"
     val TAG_ID = "id"

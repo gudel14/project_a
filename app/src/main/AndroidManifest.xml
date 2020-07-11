@@ -20,17 +20,16 @@
         <activity android:name=".input.TampilWpActivity" />
         <activity android:name=".input.TampilSemuaWpActivity" />
         <activity android:name=".input.Input_Activity">
-
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".Dashboard_Activity"/>
         <activity android:name=".Daftar_Activity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".Splash_Activity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
     </application>

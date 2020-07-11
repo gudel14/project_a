@@ -1,11 +1,11 @@
 package com.example.project_a.pompa
 
 data class Pompa (
-    var id:Long?,
-    var pompa:String,
-    var shift:String,
-    var status:String,
-    var hm:String
+    var id:Long?=null,
+    var pompa:String?=null,
+    var shift:String?=null,
+    var status:String?=null,
+    var hm:String?=null
 
 ) {
     companion object {

@@ -13,6 +13,7 @@ import com.example.project_a.Retrofit.RetrofitClient
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.AsyncTask
+import android.widget.DatePicker
 
 open class Input_Activity : AppCompatActivity(), View.OnClickListener {
 
@@ -20,6 +21,7 @@ open class Input_Activity : AppCompatActivity(), View.OnClickListener {
         private var editstatus:EditText?=null
         private var editshift:EditText?=null
         private var edithm:EditText?=null
+        private var edittgl:DatePicker?=null
 
         private var btn_save:Button?=null
         private var btn_view:Button?=null
@@ -32,6 +34,7 @@ open class Input_Activity : AppCompatActivity(), View.OnClickListener {
         editstatus= findViewById(R.id.input_status)as EditText
         editshift= findViewById(R.id.input_shift)as EditText
         edithm= findViewById(R.id.input_hm)as EditText
+        edittgl= findViewById(R.id.input_tanggal) as DatePicker
 
         btn_save = findViewById(R.id.btn_save)as Button
         btn_view = findViewById(R.id.btn_view)as Button
@@ -42,6 +45,7 @@ open class Input_Activity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun addWp (){
+        val tgl = edittgl?.getTag().toString().trim(){ it <= ' ' }
         val waterpump = editwp?.getText().toString().trim(){ it <= ' ' }
         val shift     = editshift?.getText().toString().trim(){ it <= ' ' }
         val status    = editstatus?.getText().toString().trim(){ it <= ' ' }
@@ -64,6 +68,8 @@ open class Input_Activity : AppCompatActivity(), View.OnClickListener {
                 params [RetrofitClient.KEY_WP_shift]=shift
                 params [RetrofitClient.KEY_WP_status]=status
                 params [RetrofitClient.KEY_WP_hm]=hm
+                params [RetrofitClient.KEY_WP_tanggal]=tgl
+
 
 
                 val rh = RequestHandler()
