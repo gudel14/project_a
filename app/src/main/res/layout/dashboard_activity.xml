@@ -5,62 +5,269 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Dashboard_Activity"
-    android:background="#fff"
+    android:background="@color/birumuda"
     android:orientation="vertical">
     <RelativeLayout
-        android:background="@color/gray"
+        android:id="@+id/a"
         android:layout_width="match_parent"
-        android:layout_height="250dp">
+        android:layout_height="220dp">
+        <TextView
+            android:id="@+id/a1"
+            android:text="Selamat Datang"
+            android:textSize="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/username2"
+            android:text="1234567"
+            android:textSize="30dp"
+            android:layout_below="@id/a1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
     </RelativeLayout>
-    <LinearLayout
+    <RelativeLayout
+        android:layout_below="@+id/a"
+        android:background="@drawable/layout_grid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <RelativeLayout
         android:orientation="vertical"
         android:layout_marginBottom="20dp"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="130dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-                <GridLayout
-                    android:columnOrderPreserved="false"
-                    android:alignmentMode="alignMargins"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:rowCount="3"
-                    android:columnCount="2">
+            <GridLayout
+                android:columnOrderPreserved="false"
+                android:alignmentMode="alignMargins"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:rowCount="3"
+                android:columnCount="2">
 
-                    //-------------------------------------Update wp-------------------//
-                    <androidx.cardview.widget.CardView
+                              //-------------------------------------Update wp-------------------//
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_wp"
                     android:layout_columnWeight="1"
                     android:layout_rowWeight="1"
                     app:cardUseCompatPadding="true"
                     app:cardElevation="12dp"
-                    app:cardCornerRadius="10dp"
+                    app:cardCornerRadius="22dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
-                        <LinearLayout
-                            android:layout_gravity="center"
-                            android:orientation="vertical"
-                            android:padding="26dp"
-                            android:gravity="center"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent">
-                            <ImageView
-                                android:src="@drawable/water"
-                                android:layout_width="80dp"
-                                android:layout_height="80dp">
-                            </ImageView>
-                            <TextView
-                                android:text="selamat"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content">
-                            </TextView>
-                        </LinearLayout>
-                    </androidx.cardview.widget.CardView>
+                    <LinearLayout
+                        android:layout_gravity="center"
+                        android:orientation="vertical"
+                        android:background="@drawable/layer_icon"
+                        android:padding="10dp"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:src="@drawable/icon_wp"
+                            android:layout_width="120dp"
+                            android:layout_height="100dp">
+                        </ImageView>
+                        <TextView
+                            android:layout_marginTop="13dp"
+                            android:text="INPUT WP"
+                            android:textSize="20dp"
+                            android:textStyle="bold"
+                            android:fontFamily="sans-serif-black"
+                            android:textColor="@color/birumuda"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        </TextView>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
+                //-------------------------------------Update wp-------------------//
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_tl"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    app:cardUseCompatPadding="true"
+                    app:cardElevation="12dp"
+                    app:cardCornerRadius="22dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_gravity="center"
+                        android:orientation="vertical"
+                        android:background="@drawable/layer_icon"
+                        android:padding="10dp"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:src="@drawable/icon_tl"
+                            android:layout_width="120dp"
+                            android:layout_height="100dp">
+                        </ImageView>
+                        <TextView
+                            android:layout_marginTop="13dp"
+                            android:text="INPUT TL"
+                            android:textSize="20dp"
+                            android:textStyle="bold"
+                            android:fontFamily="sans-serif-black"
+                            android:textColor="@color/birumuda"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        </TextView>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
+                //-------------------------------------Update wp-------------------//
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_report_wp"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    app:cardUseCompatPadding="true"
+                    app:cardElevation="12dp"
+                    app:cardCornerRadius="22dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_gravity="center"
+                        android:orientation="vertical"
+                        android:background="@drawable/layer_icon"
+                        android:padding="10dp"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:src="@drawable/icon_report_wp2"
+                            android:layout_width="120dp"
+                            android:layout_height="100dp">
+                        </ImageView>
+                        <TextView
+                            android:layout_marginTop="13dp"
+                            android:text="REPORT WP"
+                            android:textSize="20dp"
+                            android:textStyle="bold"
+                            android:fontFamily="sans-serif-black"
+                            android:textColor="@color/birumuda"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        </TextView>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
-                </GridLayout>
+                //-------------------------------------Update wp-------------------//
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_report_tl"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    app:cardUseCompatPadding="true"
+                    app:cardElevation="12dp"
+                    app:cardCornerRadius="22dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_gravity="center"
+                        android:orientation="vertical"
+                        android:background="@drawable/layer_icon"
+                        android:padding="10dp"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:src="@drawable/icon_report_tl"
+                            android:layout_width="120dp"
+                            android:layout_height="100dp">
+                        </ImageView>
+                        <TextView
+                            android:layout_marginTop="13dp"
+                            android:text="INPUT TL"
+                            android:textSize="20dp"
+                            android:textStyle="bold"
+                            android:fontFamily="sans-serif-black"
+                            android:textColor="@color/birumuda"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        </TextView>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                //-------------------------------------Update wp-------------------//
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_tentang"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    app:cardUseCompatPadding="true"
+                    app:cardElevation="12dp"
+                    app:cardCornerRadius="22dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_gravity="center"
+                        android:orientation="vertical"
+                        android:background="@drawable/layer_icon"
+                        android:padding="10dp"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:src="@drawable/icon_tentang"
+                            android:layout_width="120dp"
+                            android:layout_height="100dp">
+                        </ImageView>
+                        <TextView
+                            android:layout_marginTop="13dp"
+                            android:text="TENTENG"
+                            android:textSize="20dp"
+                            android:textStyle="bold"
+                            android:fontFamily="sans-serif-black"
+                            android:textColor="@color/birumuda"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        </TextView>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                //-------------------------------------Update wp-------------------//
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_keluar"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    app:cardUseCompatPadding="true"
+                    app:cardElevation="12dp"
+                    app:cardCornerRadius="22dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_gravity="center"
+                        android:orientation="vertical"
+                        android:background="@drawable/layer_icon"
+                        android:padding="10dp"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:src="@drawable/icon_keluar"
+                            android:layout_width="120dp"
+                            android:layout_height="100dp">
+                        </ImageView>
+                        <TextView
+                            android:layout_marginTop="13dp"
+                            android:text="KELUAR"
+                            android:textSize="20dp"
+                            android:textStyle="bold"
+                            android:fontFamily="sans-serif-black"
+                            android:textColor="@color/birumuda"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        </TextView>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </GridLayout>
         </ScrollView>
-    </LinearLayout>
+    </RelativeLayout>
+
+
 </RelativeLayout>

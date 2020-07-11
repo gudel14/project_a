@@ -15,6 +15,7 @@ import com.example.project_a.R
 import com.example.project_a.RequestHandler
 import com.example.project_a.Retrofit.RetrofitClient
 import kotlinx.android.synthetic.main.activity_tampil_wp.*
+import kotlinx.android.synthetic.main.list_item.*
 import org.jetbrains.anko.AlertDialogBuilder
 import org.json.JSONException
 import org.json.JSONObject
@@ -25,6 +26,7 @@ class TampilWpActivity : AppCompatActivity(), View.OnClickListener {
     private var wp :EditText?=null
     private var shift :EditText?=null
     private var status :EditText?=null
+    private var hm :EditText?=null
 
     private var edit:Button?=null
     private var hapus:Button?=null
@@ -44,6 +46,7 @@ class TampilWpActivity : AppCompatActivity(), View.OnClickListener {
         wp=findViewById(R.id.tampil_wp)as EditText
         shift=findViewById(R.id.tampil_shift)as EditText
         status=findViewById(R.id.tampil_status)as EditText
+        hm=findViewById(R.id.tampil_hm)as EditText
 
         edit=findViewById(R.id.tampil_btnedit)as Button
         hapus=findViewById(R.id.tampil_btnhapus)as Button
@@ -92,11 +95,13 @@ class TampilWpActivity : AppCompatActivity(), View.OnClickListener {
             val wpp = jo.getString(RetrofitClient.TAG_WP)
             val shiftt = jo.getString(RetrofitClient.TAG_SHIFT)
             val statuss = jo.getString(RetrofitClient.TAG_STATUS)
+            val hmm = jo.getString(RetrofitClient.TAG_HM)
 
 //           id_id?.setText(id)
             wp?.setText(wpp)
             shift?.setText(shiftt)
             status?.setText(statuss)
+            hm?.setText(hmm)
 
         }catch (e : JSONException){
             e.printStackTrace()
@@ -142,9 +147,7 @@ class TampilWpActivity : AppCompatActivity(), View.OnClickListener {
         }
 
         alertDialogBuilder.setNegativeButton("tidak", object :DialogInterface.OnClickListener{
-                override fun onClick(arg0:DialogInterface, arg1:Int){
-
-                }
+                override fun onClick(arg0:DialogInterface, arg1:Int){}
             })
 
             val alertDialog = alertDialogBuilder.create()

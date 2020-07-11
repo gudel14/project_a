@@ -49,9 +49,13 @@ class TampilSemuaWpActivity : AppCompatActivity(), AdapterView.OnItemClickListen
                 val jo = result.getJSONObject(i)
                 val id = jo.getString(RetrofitClient.TAG_ID)
                 val wp = jo.getString(RetrofitClient.TAG_WP)
+                val hm = jo.getString(RetrofitClient.TAG_HM)
+
                 val show = HashMap<String,String?>()
                 show [RetrofitClient.TAG_ID]=id
-                show[RetrofitClient.TAG_WP]= wp
+                show [RetrofitClient.TAG_WP]=wp
+                show [RetrofitClient.TAG_HM]=hm
+
 
                 list.add(show)
             }
@@ -60,8 +64,8 @@ class TampilSemuaWpActivity : AppCompatActivity(), AdapterView.OnItemClickListen
     }
         val adapter= SimpleAdapter(
             this@TampilSemuaWpActivity, list,R.layout.list_item,
-            arrayOf (RetrofitClient.TAG_ID, RetrofitClient.TAG_WP),
-            intArrayOf(R.id.id,R.id.wp)
+            arrayOf (RetrofitClient.TAG_ID, RetrofitClient.TAG_WP, RetrofitClient.TAG_HM),
+            intArrayOf(R.id.id,R.id.wp, R.id.hm)
         )
         listView?.setAdapter(adapter)
     }

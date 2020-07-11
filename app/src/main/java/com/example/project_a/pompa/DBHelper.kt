@@ -15,15 +15,15 @@ class DBHelper (ctx:Context):ManagedSQLiteOpenHelper(ctx,"Pompa.db, null, 1") {
             }
             return insatance as DBHelper
         }
-
     }
-
     override fun onCreate(p0: SQLiteDatabase?) {
         p0?.createTable(Pompa.Tabel_Pompa, true,
             Pompa.ID to INTEGER+ PRIMARY_KEY+ AUTOINCREMENT,
         Pompa.POMPA to TEXT,
         Pompa.SHIFT to TEXT,
-        Pompa.STATUS to TEXT)
+        Pompa.STATUS to TEXT,
+        Pompa.HM to TEXT
+        )
     }
 
     override fun onUpgrade(p0: SQLiteDatabase?, p1: Int, p2: Int) {

@@ -6,17 +6,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".pompa.Pompa2Activity">
+    <Button
+        android:id="@+id/kembali"
+        android:text="input data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycle"
+        android:padding="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
     </androidx.recyclerview.widget.RecyclerView>
-    <Button
-        android:id="@+id/kembali"
-        android:gravity="bottom"
-        android:text="input data"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+
+    </LinearLayout>
 
 
 </LinearLayout>

@@ -11,17 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".nav_pompa.NavActivity">
-
-        </activity>
-        <activity android:name=".pompa.Pompa2Activity">
-        </activity>
+        <activity android:name=".input.PushActivity"/>
+        <activity android:name=".nav_pompa.NavActivity" />
+        <activity android:name=".pompa.Pompa2Activity" />
         <activity android:name=".pompa.PompaActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
 
         </activity>
         <activity android:name=".input.TampilWpActivity" />
@@ -29,10 +22,16 @@
         <activity android:name=".input.Input_Activity">
 
         </activity>
-        <activity android:name=".Dashboard_Activity" />
+        <activity android:name=".Dashboard_Activity"/>
         <activity android:name=".Daftar_Activity" />
         <activity android:name=".LoginActivity" />
-        <activity android:name=".Splash_Activity" />
+        <activity android:name=".Splash_Activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".MainActivity" />
     </application>
 

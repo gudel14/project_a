@@ -6,7 +6,7 @@
     android:background="@color/colorAccent"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".pompa.PompaActivity">
+    tools:context=".input.PushActivity">
     <LinearLayout
         android:orientation="vertical"
         android:gravity="center"
@@ -14,7 +14,7 @@
         android:layout_height="100dp">
 
         <TextView
-            android:text="INPUT"
+            android:text="PUSH"
             android:textSize="25dp"
             android:textColor="@color/black"
             android:gravity="center"
@@ -37,18 +37,18 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-<!--    <Spinner-->
-<!--        android:id="@+id/editTextPompa"-->
-<!--        android:entries="@array/wp"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"/>-->
+        <!--    <Spinner-->
+        <!--        android:id="@+id/editTextPompa"-->
+        <!--        android:entries="@array/wp"-->
+        <!--        android:layout_width="match_parent"-->
+        <!--        android:layout_height="wrap_content"/>-->
 
         <EditText
-        android:id="@+id/editTextPompa"
-        android:hint="pompa"
-        android:textColor="@color/colorPrimary"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+            android:id="@+id/editTextPompa"
+            android:hint="pompa"
+            android:textColor="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
         <EditText
             android:id="@+id/editTextShift"
             android:hint="shift"
@@ -61,29 +61,10 @@
             android:textColor="@color/colorPrimary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
-        <EditText
-            android:id="@+id/editTextHm"
-            android:hint="hm"
-            android:textColor="@color/colorPrimary"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
 
-
-
-        //---------------------------------------------------
         <Button
-            android:id="@+id/button_simpan"
-            android:text="simpan"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-        <Button
-            android:id="@+id/button_lihat"
-            android:text="lihat"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-        <Button
-            android:id="@+id/button_update"
-            android:text="update"
+            android:id="@+id/button_push"
+            android:text="PUSH"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
     </LinearLayout>

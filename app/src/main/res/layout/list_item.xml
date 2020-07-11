@@ -6,10 +6,17 @@
     android:layout_height="match_parent">
     <TextView
         android:id="@+id/id"
+        android:text="id"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
     <TextView
         android:id="@+id/wp"
+        android:text="pompa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/hm"
+        android:text="hm"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 

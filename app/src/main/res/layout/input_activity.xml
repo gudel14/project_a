@@ -34,6 +34,11 @@
             android:hint="Water status"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/input_hm"
+            android:hint="HM"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
 <!--        <EditText-->
 <!--            android:id="@+id/input_tanggal"-->
 <!--            android:hint="Water tanggal"-->

@@ -16,12 +16,11 @@ import android.os.AsyncTask
 
 open class Input_Activity : AppCompatActivity(), View.OnClickListener {
 
-
-
-
         private var editwp:EditText?=null
         private var editstatus:EditText?=null
         private var editshift:EditText?=null
+        private var edithm:EditText?=null
+
         private var btn_save:Button?=null
         private var btn_view:Button?=null
 
@@ -29,23 +28,24 @@ open class Input_Activity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.input_activity)
 
-
-
         editwp= findViewById(R.id.input_wp)as EditText
         editstatus= findViewById(R.id.input_status)as EditText
         editshift= findViewById(R.id.input_shift)as EditText
+        edithm= findViewById(R.id.input_hm)as EditText
+
         btn_save = findViewById(R.id.btn_save)as Button
         btn_view = findViewById(R.id.btn_view)as Button
 
         btn_view!!.setOnClickListener(this)
-
         btn_save!!.setOnClickListener (this)
+
     }
 
     private fun addWp (){
         val waterpump = editwp?.getText().toString().trim(){ it <= ' ' }
-        val shift = editshift?.getText().toString().trim(){ it <= ' ' }
-        val status = editstatus?.getText().toString().trim(){ it <= ' ' }
+        val shift     = editshift?.getText().toString().trim(){ it <= ' ' }
+        val status    = editstatus?.getText().toString().trim(){ it <= ' ' }
+        val hm        = edithm?.getText().toString().trim(){ it <= ' ' }
 
         lateinit var loading:ProgressDialog
         class Addwp : AsyncTask<Void, Void, String>(){
@@ -63,6 +63,8 @@ open class Input_Activity : AppCompatActivity(), View.OnClickListener {
                 params [RetrofitClient.KEY_WP_WP]=waterpump
                 params [RetrofitClient.KEY_WP_shift]=shift
                 params [RetrofitClient.KEY_WP_status]=status
+                params [RetrofitClient.KEY_WP_hm]=hm
+
 
                 val rh = RequestHandler()
                 return rh.sendPostRequest(RetrofitClient.urlad,params)
