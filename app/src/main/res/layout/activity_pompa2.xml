@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
+    android:background="@color/colorAccent"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".pompa.Pompa2Activity">
@@ -11,18 +12,26 @@
         android:text="input data"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
+    <ScrollView
+        android:background="@drawable/layer_inputwp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <LinearLayout
+        android:background="@drawable/layer_inputwp"
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycle"
-        android:padding="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-    </androidx.recyclerview.widget.RecyclerView>
+        android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycle"
+                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                </androidx.recyclerview.widget.RecyclerView>
+
 
     </LinearLayout>
+    </ScrollView>
 
 
 </LinearLayout>

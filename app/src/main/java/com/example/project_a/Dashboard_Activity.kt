@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.example.project_a.input.Input_Activity
+import com.example.project_a.input.ReportPompaActivity
 import com.example.project_a.pompa.PompaActivity
 import kotlinx.android.synthetic.main.dashboard_activity.*
 
@@ -18,9 +19,21 @@ class Dashboard_Activity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.dashboard_activity)
 
+
+
+        card_report_wp.setOnClickListener {
+            startActivity(Intent(this, ReportPompaActivity::class.java))
+        }
+
         card_wp.setOnClickListener {
             startActivity(Intent(this, PompaActivity::class.java))
         }
+
+        card_tentang.setOnClickListener {
+            startActivity(Intent(this, Input_Activity::class.java))
+        }
+
+
 
         preferences = getSharedPreferences("SHARED_PREF", Context.MODE_PRIVATE)
 
@@ -39,7 +52,5 @@ class Dashboard_Activity : AppCompatActivity() {
             Toast.makeText(this, "Logout Berhasil", Toast.LENGTH_SHORT).show()
             finish()
         }
-
-
     }
 }

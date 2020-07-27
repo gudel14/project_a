@@ -22,7 +22,14 @@ class DBHelper (ctx:Context):ManagedSQLiteOpenHelper(ctx,"Pompa.db, null, 1") {
         Pompa.POMPA to TEXT,
         Pompa.SHIFT to TEXT,
         Pompa.STATUS to TEXT,
-        Pompa.HM to TEXT
+        Pompa.RPM to TEXT,
+        Pompa.HM to TEXT,
+        Pompa.FUEL to TEXT,
+        Pompa.ENGINE to TEXT,
+        Pompa.PREASURE to TEXT,
+        Pompa.DEBIT to TEXT,
+        Pompa.ELEVASI to TEXT,
+        Pompa.TANGGAL to TEXT
         )
     }
 

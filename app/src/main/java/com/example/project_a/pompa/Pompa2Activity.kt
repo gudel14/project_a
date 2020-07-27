@@ -28,6 +28,8 @@ class Pompa2Activity : AppCompatActivity() {
 
         kembali.setOnClickListener{
             startActivity(Intent(this, PompaActivity::class.java))
+            finish()
+
         }
 
     }

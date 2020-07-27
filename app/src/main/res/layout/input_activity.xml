@@ -19,12 +19,6 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <DatePicker
-            android:id="@+id/input_tanggal"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent">
-        </DatePicker>
-
 
         <EditText
             android:id="@+id/input_wp"
@@ -52,6 +46,31 @@
 <!--            android:layout_width="match_parent"-->
 <!--            android:layout_height="wrap_content"/>-->
 
+        <EditText
+            android:id="@+id/input_fuel"
+            android:hint="fuel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/input_engine"
+            android:hint="engine load"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/input_preasure"
+            android:hint="preasure"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/input_debit"
+            android:hint="debit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/input_elevasi"
+            android:hint="elevasi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
         <Button
             android:id="@+id/btn_save"
             android:text="input"

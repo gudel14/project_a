@@ -1,27 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".input.HapusReportActivity">
 
     <LinearLayout
-        android:background="@drawable/item_list"
-        android:padding="10dp"
-        android:layout_marginBottom="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <LinearLayout
+            android:gravity="center"
             android:layout_weight="1"
+            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-
                 <TableRow
+                    android:gravity="center"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <TextView
@@ -34,14 +36,17 @@
                         android:layout_marginRight="3dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
-                    <TextView
-                        android:id="@+id/update_tanggal"
-                        android:textColor="@color/black"
+
+                    <EditText
+                        android:id="@+id/hapus_tanggal"
+                        android:hint="tanggal"
+                        android:textColor="@color/colorPrimary"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
                 </TableRow>
 
                 <TableRow
+                    android:gravity="center"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <TextView
@@ -54,18 +59,22 @@
                         android:layout_marginRight="3dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
-                    <TextView
-                        android:id="@+id/update_wp"
-                        android:textColor="@color/black"
-                        android:background="#FFEB3B"
+
+                    <EditText
+                        android:id="@+id/hapus_wp"
+                        android:hint="pompa"
+                        android:textColor="@color/colorPrimary"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
                 </TableRow>
+
                 <TableRow
+                    android:gravity="center"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <TextView
                         android:text="Shift"
+                        android:layout_marginRight="15dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
                     <TextView
@@ -73,17 +82,21 @@
                         android:layout_marginRight="3dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
-                    <TextView
-                        android:id="@+id/update_shift"
-                        android:textColor="@color/black"
+                    <EditText
+                        android:id="@+id/hapus_shift"
+                        android:hint="shift"
+                        android:textColor="@color/colorPrimary"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
                 </TableRow>
+
                 <TableRow
+                    android:gravity="center"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <TextView
                         android:text="Status"
+                        android:layout_marginRight="15dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
                     <TextView
@@ -91,35 +104,21 @@
                         android:layout_marginRight="3dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
-                    <TextView
-                        android:id="@+id/update_status"
-                        android:textColor="@color/black"
+                    <EditText
+                        android:id="@+id/hapus_status"
+                        android:hint="status"
+                        android:textColor="@color/colorPrimary"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
                 </TableRow>
+
                 <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <TextView
-                        android:text="RPM"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
-                    <TextView
-                        android:text=":"
-                        android:layout_marginRight="3dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
-                    <TextView
-                        android:id="@+id/update_rpm"
-                        android:textColor="@color/black"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
-                </TableRow>
-                <TableRow
+                    android:gravity="center"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <TextView
                         android:text="HM"
+                        android:layout_marginRight="15dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
                     <TextView
@@ -127,17 +126,20 @@
                         android:layout_marginRight="3dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
-                    <TextView
-                        android:id="@+id/update_hm"
-                        android:textColor="@color/black"
+                    <EditText
+                        android:id="@+id/hapus_hm"
+                        android:hint="hm"
+                        android:textColor="@color/colorPrimary"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
                 </TableRow>
                 <TableRow
+                    android:gravity="center"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <TextView
-                        android:text="F. Rate"
+                        android:text="RPM"
+                        android:layout_marginRight="15dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
                     <TextView
@@ -145,17 +147,34 @@
                         android:layout_marginRight="3dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
-                    <TextView
-                        android:id="@+id/update_fuel"
-                        android:textColor="@color/black"
+                    <EditText
+                        android:id="@+id/hapus_rpm"
+                        android:hint="rpm"
+                        android:textColor="@color/colorPrimary"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
                 </TableRow>
+
+
+            </TableLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
                 <TableRow
+                    android:gravity="center"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <TextView
-                        android:text="E. Load"
+                        android:text="Fuel"
+                        android:layout_marginRight="15dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
                     <TextView
@@ -163,17 +182,22 @@
                         android:layout_marginRight="3dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
-                    <TextView
-                        android:id="@+id/update_engine"
-                        android:textColor="@color/black"
+
+                    <EditText
+                        android:id="@+id/hapus_fuel"
+                        android:hint="fuel"
+                        android:textColor="@color/colorPrimary"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
                 </TableRow>
+
                 <TableRow
+                    android:gravity="center"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <TextView
-                        android:text="P. Gauge"
+                        android:text="Engine"
+                        android:layout_marginRight="15dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
                     <TextView
@@ -181,17 +205,44 @@
                         android:layout_marginRight="3dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
-                    <TextView
-                        android:id="@+id/update_preasure"
-                        android:textColor="@color/black"
+
+                    <EditText
+                        android:id="@+id/hapus_engine"
+                        android:hint="engine"
+                        android:textColor="@color/colorPrimary"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
                 </TableRow>
+
                 <TableRow
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="Preasure"
+                        android:layout_marginRight="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:text=":"
+                        android:layout_marginRight="3dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <EditText
+                        android:id="@+id/hapus_preasure"
+                        android:hint="preasure"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </TableRow>
+
+                <TableRow
+                    android:gravity="center"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <TextView
                         android:text="Debit"
+                        android:layout_marginRight="15dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
                     <TextView
@@ -199,17 +250,21 @@
                         android:layout_marginRight="3dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
-                    <TextView
-                        android:id="@+id/update_debit"
-                        android:textColor="@color/black"
+                    <EditText
+                        android:id="@+id/hapus_debit"
+                        android:hint="debit"
+                        android:textColor="@color/colorPrimary"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
                 </TableRow>
+
                 <TableRow
+                    android:gravity="center"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <TextView
                         android:text="Elevasi"
+                        android:layout_marginRight="15dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
                     <TextView
@@ -217,43 +272,73 @@
                         android:layout_marginRight="3dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
-                    <TextView
-                        android:id="@+id/update_elevasi"
-                        android:textColor="@color/black"
+                    <EditText
+                        android:id="@+id/hapus_elevasi"
+                        android:hint="Elevasi"
+                        android:textColor="@color/colorPrimary"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
                 </TableRow>
 
 
-
-
             </TableLayout>
+        </LinearLayout>
 
-        </LinearLayout>
-        <LinearLayout
-            android:layout_weight="2"
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <Button
-                android:id="@+id/update_btnedit"
-                android:layout_weight="1"
-                android:text="Edit"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-            <Button
-                android:id="@+id/update_btnhapus"
-                android:layout_weight="1"
-                android:text="Hapus"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-            <Button
-                android:id="@+id/update_btnpush"
-                android:layout_weight="1"
-                android:text="Push"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-        </LinearLayout>
+
+
+
+<!--        <LinearLayout-->
+<!--            android:layout_weight="1"-->
+<!--            android:orientation="vertical"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content">-->
+<!--            <TableLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content">-->
+<!--                <EditText-->
+<!--                    android:id="@+id/hapus_fuel"-->
+<!--                    android:hint="fuel"-->
+<!--                    android:textColor="@color/colorPrimary"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"/>-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/hapus_engine"-->
+<!--                    android:hint="engine"-->
+<!--                    android:textColor="@color/colorPrimary"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"/>-->
+<!--                <EditText-->
+<!--                    android:id="@+id/hapus_preasure"-->
+<!--                    android:hint="preasure"-->
+<!--                    android:textColor="@color/colorPrimary"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"/>-->
+<!--                <EditText-->
+<!--                    android:id="@+id/hapus_debit"-->
+<!--                    android:hint="debit"-->
+<!--                    android:textColor="@color/colorPrimary"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"/>-->
+<!--            -->
+<!--                <EditText-->
+<!--                    android:id="@+id/hapus_elevasi"-->
+<!--                    android:hint="elevasi"-->
+<!--                    android:textColor="@color/colorPrimary"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"/>-->
+<!--            </TableLayout>-->
+<!--        </LinearLayout>         -->
     </LinearLayout>
+
+    <Button
+        android:id="@+id/hapus_btnhapus"
+        android:text="hapus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+
+
 
 </LinearLayout>

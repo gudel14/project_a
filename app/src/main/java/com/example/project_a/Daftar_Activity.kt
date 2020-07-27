@@ -25,10 +25,10 @@ class Daftar_Activity : AppCompatActivity() {
         val retrofit = RetrofitClient.instance
         myAPI = retrofit.create(API::class.java)
 
-
         //Metode kembali ke login
         regis_btn_login.setOnClickListener {
             startActivity(Intent(this, LoginActivity::class.java))
+            finish()
         }
 
         // Metode tombol daftar
@@ -80,9 +80,7 @@ class Daftar_Activity : AppCompatActivity() {
                 regis_nama.text.toString(),
                 regis_pass.text.toString()
             )
-
         }
-
     }
 
     private fun registerData(nrp: String, nama: String, pass: String) {
@@ -102,7 +100,6 @@ class Daftar_Activity : AppCompatActivity() {
         regis_con_pass.setText("")
         regis_nrp.requestFocus()
     }
-
 
     override fun onStop() {
         compositeDisposable.clear()

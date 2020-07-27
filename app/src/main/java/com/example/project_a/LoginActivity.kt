@@ -46,6 +46,7 @@ class LoginActivity : AppCompatActivity() {
         //Metode tombol register
         btn_daftar.setOnClickListener {
             startActivity(Intent(this, Daftar_Activity::class.java))
+            finish()
         }
 
         //metode tombol masuk
@@ -63,6 +64,21 @@ class LoginActivity : AppCompatActivity() {
             }
             if (!checkBox.isChecked){
                 checkBox.setError("Belum Dapat Login")
+                return@setOnClickListener
+            }
+            if (log_nrp.text.toString().length < 7) {
+                log_nrp.setError("NRP anda salah")
+                log_nrp.requestFocus()
+                return@setOnClickListener
+            }
+            if (log_nrp.text.toString().length > 7) {
+                log_nrp.setError("NRP anda salah")
+                log_nrp.requestFocus()
+                return@setOnClickListener
+            }
+            if (log_pass.text.toString().length < 8) {
+                log_pass.setError("Password Salah")
+                log_pass.requestFocus()
                 return@setOnClickListener
             }
 
@@ -86,7 +102,7 @@ class LoginActivity : AppCompatActivity() {
         myAPI.loginUser(nrp, pass)
             .enqueue(object :Callback<APIRespon>{
                 override fun onFailure(call: Call<APIRespon>, t: Throwable) {
-                    Toast.makeText(this@LoginActivity, "Periksa Kembali Jaringan/NRP & Password Anda", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@LoginActivity,"Gagal Login",Toast.LENGTH_SHORT).show()
                     val editor : SharedPreferences.Editor = sharedPreferences.edit()
                     editor.clear()
                     editor.apply()
@@ -95,7 +111,7 @@ class LoginActivity : AppCompatActivity() {
                 override fun onResponse(call: Call<APIRespon>, response: Response<APIRespon>) {
                     // Toast.makeText(this@LoginActivity, response.body()!!.error_pesan, Toast.LENGTH_SHORT).show()
                     if (response.body()!!.error) {
-                        Toast.makeText(this@LoginActivity, response.body()!!.error_pesan, Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this@LoginActivity, "NRP/Password Salah", Toast.LENGTH_SHORT).show()
                     } else {
                         intent= Intent(applicationContext, Dashboard_Activity::class.java)
                         startActivity(intent)

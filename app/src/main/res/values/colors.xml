@@ -7,4 +7,8 @@
     <color name="black">#040404</color>
     <color name="gray">#6C6767</color>
     <color name="birumuda">#00adef</color>
+    <color name="colorHeadTabel">#FFE500</color>
+    <color name="colorBodyTabel">#D9E8EA</color>
+    <color name="colorBodyTabelKet">#E7ECB6</color>
+    <color name="colorIjo">#B3E47B</color>
 </resources>
