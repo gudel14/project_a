@@ -8,7 +8,9 @@ import android.os.Bundle
 import android.widget.Toast
 import com.example.project_a.input.Input_Activity
 import com.example.project_a.input.ReportPompaActivity
+import com.example.project_a.input.TampilSemuaWpActivity
 import com.example.project_a.pompa.PompaActivity
+import com.example.project_a.pompa.TowerActivity
 import kotlinx.android.synthetic.main.dashboard_activity.*
 
 class Dashboard_Activity : AppCompatActivity() {
@@ -20,20 +22,21 @@ class Dashboard_Activity : AppCompatActivity() {
         setContentView(R.layout.dashboard_activity)
 
 
-
         card_report_wp.setOnClickListener {
-            startActivity(Intent(this, ReportPompaActivity::class.java))
+            startActivity(Intent(this, TampilSemuaWpActivity::class.java))
         }
 
         card_wp.setOnClickListener {
             startActivity(Intent(this, PompaActivity::class.java))
         }
 
-        card_tentang.setOnClickListener {
-            startActivity(Intent(this, Input_Activity::class.java))
+        card_tl.setOnClickListener {
+            startActivity(Intent(this, TowerActivity::class.java))
         }
 
-
+//        card_tentang.setOnClickListener {
+//            startActivity(Intent(this, Input_Activity::class.java))
+//        }
 
         preferences = getSharedPreferences("SHARED_PREF", Context.MODE_PRIVATE)
 

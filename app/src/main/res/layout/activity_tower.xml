@@ -6,7 +6,7 @@
     android:background="@color/colorAccent"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".pompa.PompaActivity">
+    tools:context=".pompa.TowerActivity">
     <LinearLayout
         android:orientation="vertical"
         android:gravity="center"
@@ -22,7 +22,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
         <TextView
-            android:text="WATER PUMP"
+            android:text="TOWER LAMP"
             android:gravity="center"
             android:textSize="20dp"
             android:textColor="@color/black"
@@ -37,14 +37,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-
         <LinearLayout
             android:paddingLeft="5dp"
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <TextView
-                android:id="@+id/editTextTanggal"
+                android:id="@+id/textTanggal"
                 android:hint="TANGGAL"
                 android:layout_weight="1"
                 android:textSize="15sp"
@@ -52,7 +51,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
             <Button
-                android:id="@+id/button_tanggal"
+                android:id="@+id/tlbutton_tanggal"
                 android:text="PILIH"
                 android:layout_weight="2"
                 android:layout_width="match_parent"
@@ -69,27 +68,27 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textLamp"
+                    android:hint="TL"
+                    android:textSize="15sp"
+                    android:outlineProvider="bounds"
+                    android:maxLength="6"
+                    android:inputType="textCapCharacters"
+                    android:singleLine="true"
+                    android:textColor="@color/colorPrimary"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/editTextPompa"
-                        android:hint="POMPA"
-                        android:textSize="15sp"
-                        android:outlineProvider="bounds"
-                        android:maxLength="6"
-                        android:inputType="textCapCharacters"
-                        android:singleLine="true"
-                        android:textColor="@color/colorPrimary"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-                    </com.google.android.material.textfield.TextInputEditText>
-                </com.google.android.material.textfield.TextInputLayout>
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/editTextShift"
+                        android:id="@+id/textShift"
                         android:hint="SHIFT"
                         android:textSize="15sp"
                         android:maxLength="1"
@@ -105,7 +104,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/editTextStatus"
+                        android:id="@+id/textStatus"
                         android:hint="STATUS"
                         android:textSize="15sp"
                         android:maxLength="3"
@@ -117,38 +116,11 @@
                     </com.google.android.material.textfield.TextInputEditText>
                 </com.google.android.material.textfield.TextInputLayout>
 
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/editTextRpm"
-                        android:hint="RPM"
-                        android:textSize="15sp"
-                        android:maxLength="4"
-                        android:inputType="number"
-                        android:singleLine="true"
-                        android:textColor="@color/colorPrimary"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-                    </com.google.android.material.textfield.TextInputEditText>
-                </com.google.android.material.textfield.TextInputLayout>
 
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/editTextHm"
-                        android:hint="HM"
-                        android:textSize="15sp"
-                        android:maxLength="10"
-                        android:inputType="phone"
-                        android:singleLine="true"
-                        android:textColor="@color/colorPrimary"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-                    </com.google.android.material.textfield.TextInputEditText>
-                </com.google.android.material.textfield.TextInputLayout>
             </LinearLayout>
+
+
+
             <LinearLayout
                 android:layout_weight="1"
                 android:orientation="vertical"
@@ -158,8 +130,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/editTextFuel"
-                        android:hint="FUEL RATE (l/h)"
+                        android:id="@+id/textHm"
+                        android:hint="HM"
                         android:maxLength="3"
                         android:textSize="15sp"
                         android:inputType="phone"
@@ -174,8 +146,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/editTextEngine"
-                        android:hint="ENGINE LOAD (%)"
+                        android:id="@+id/textFuel"
+                        android:hint="Fuel (%)"
                         android:textSize="15sp"
                         android:maxLength="3"
                         android:inputType="phone"
@@ -186,51 +158,6 @@
                     </com.google.android.material.textfield.TextInputEditText>
                 </com.google.android.material.textfield.TextInputLayout>
 
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/editTextPreasure"
-                        android:hint="PREASURE GAUGE (kPa)"
-                        android:textSize="15sp"
-                        android:inputType="phone"
-                        android:singleLine="true"
-                        android:textColor="@color/colorPrimary"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-                    </com.google.android.material.textfield.TextInputEditText>
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/editTextDebit"
-                        android:hint="DEBIT (m3/h)"
-                        android:textSize="15sp"
-                        android:inputType="phone"
-                        android:singleLine="true"
-                        android:textColor="@color/colorPrimary"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-                    </com.google.android.material.textfield.TextInputEditText>
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/editTextElevasi"
-                        android:hint="ELEVASI (m)"
-                        android:textSize="15sp"
-                        android:inputType="phone"
-                        android:singleLine="true"
-                        android:textColor="@color/colorPrimary"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="20dp">
-                    </com.google.android.material.textfield.TextInputEditText>
-                </com.google.android.material.textfield.TextInputLayout>
             </LinearLayout>
         </LinearLayout>
 
@@ -243,19 +170,19 @@
             android:layout_height="wrap_content">
 
             <Button
-                android:id="@+id/button_simpan"
+                android:id="@+id/tlbutton_simpan"
                 android:text="simpan"
                 android:layout_weight="1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
             <Button
-                android:id="@+id/button_lihat"
+                android:id="@+id/tlbutton_lihat"
                 android:text="lihat"
                 android:layout_weight="1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
             <Button
-                android:id="@+id/button_update"
+                android:id="@+id/tlbutton_update"
                 android:text="Edit"
                 android:layout_weight="1"
                 android:layout_width="match_parent"

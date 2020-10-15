@@ -12,6 +12,7 @@ import android.widget.SimpleAdapter
 import com.example.project_a.R
 import com.example.project_a.RequestHandler
 import com.example.project_a.Retrofit.RetrofitClient
+import kotlinx.android.synthetic.main.activity_tampil_semua_wp.*
 import kotlinx.android.synthetic.main.list_item.*
 import org.json.JSONException
 import org.json.JSONObject
@@ -35,6 +36,10 @@ class TampilSemuaWpActivity : AppCompatActivity(), AdapterView.OnItemClickListen
         listView!!.setOnItemClickListener(this)
         get_JSON()
 
+        report.setOnClickListener{
+            startActivity(Intent(this, ReportPompaActivity::class.java))
+        }
+
 
     }
 
@@ -52,12 +57,14 @@ class TampilSemuaWpActivity : AppCompatActivity(), AdapterView.OnItemClickListen
                 val tanggal = jo.getString(RetrofitClient.TAG_TANGGAL)
                 val wp = jo.getString(RetrofitClient.TAG_WP)
                 val hm = jo.getString(RetrofitClient.TAG_HM)
+//                val fuel = jo.getString(RetrofitClient.TAG_FUEL)
 
                 val show = HashMap<String,String?>()
                 show [RetrofitClient.TAG_ID]=id
                 show [RetrofitClient.TAG_TANGGAL]=tanggal
                 show [RetrofitClient.TAG_WP]=wp
                 show [RetrofitClient.TAG_HM]=hm
+//                show [RetrofitClient.TAG_FUEL]=fuel
 
                 list.add(show)
             }
@@ -79,7 +86,7 @@ class TampilSemuaWpActivity : AppCompatActivity(), AdapterView.OnItemClickListen
             override fun onPreExecute(){
                 super.onPreExecute()
                 loading=
-                    ProgressDialog.show(this@TampilSemuaWpActivity , "mengambil data", "tunggu", false, false)
+                    ProgressDialog.show(this@TampilSemuaWpActivity , "Mengakses Data", "Tunggu", false, false)
             }
             override fun onPostExecute (s:String){
                 super.onPostExecute(s)

@@ -330,6 +330,20 @@
 <!--            </TableLayout>-->
 <!--        </LinearLayout>         -->
     </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Keterangan :"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/hapus_keterangan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
 
     <Button
         android:id="@+id/hapus_btnhapus"

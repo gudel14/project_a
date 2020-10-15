@@ -33,6 +33,7 @@ class HapusReportActivity : AppCompatActivity(), View.OnClickListener {
     private var debit : EditText?=null
     private var elevasi : EditText?=null
     private var tanggal : EditText?=null
+    private var keterangan : EditText?=null
 
     private var edit: Button?=null
     private var hapus: Button?=null
@@ -60,6 +61,7 @@ class HapusReportActivity : AppCompatActivity(), View.OnClickListener {
         debit   =findViewById(R.id.hapus_debit)as EditText
         elevasi =findViewById(R.id.hapus_elevasi)as EditText
         tanggal =findViewById(R.id.hapus_tanggal)as EditText
+        keterangan =findViewById(R.id.hapus_keterangan)as EditText
 
         hapus   =findViewById(R.id.hapus_btnhapus)as Button
 
@@ -116,6 +118,7 @@ class HapusReportActivity : AppCompatActivity(), View.OnClickListener {
             val debitt = jo.getString(RetrofitClient.TAG_DEBIT)
             val elevasii = jo.getString(RetrofitClient.TAG_ELEVASI)
             val tanggall = jo.getString(RetrofitClient.TAG_TANGGAL)
+            val keterangann = jo.getString(RetrofitClient.TAG_KETERANGAN)
 
 ////           id_id?.setText(id)
             wp?.setText(wpp)
@@ -129,6 +132,7 @@ class HapusReportActivity : AppCompatActivity(), View.OnClickListener {
             debit?.setText(debitt)
             elevasi?.setText(elevasii)
             tanggal?.setText(tanggall)
+            keterangan?.setText(keterangann)
 
         }catch (e : JSONException){
             e.printStackTrace()

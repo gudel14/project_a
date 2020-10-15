@@ -31,49 +31,49 @@ import kotlin.collections.HashMap
 
 class PushActivity : AppCompatActivity() {
 
-    var pushTanggal:TextView?=null
-    var btnPushTanggal: Button?=null
-    var cal= Calendar.getInstance()
+    var pushTanggal: TextView? = null
+    var btnPushTanggal: Button? = null
+    var cal = Calendar.getInstance()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_push)
 
+
         //-------------------------------------------------------
-        pushTanggal=findViewById(R.id.pushTextTanggal) as TextView
-        btnPushTanggal=findViewById(R.id.push_tanggal) as Button
+        pushTanggal = findViewById(R.id.pushTextTanggal) as TextView
+        btnPushTanggal = findViewById(R.id.push_tanggal) as Button
 
         //-------------------------------------------------------
 
 
         var oldpompa = getIntent().getStringExtra("oldpompa")
         var oldshift = getIntent().getStringExtra("oldshift")
-        var oldstatus= getIntent().getStringExtra("oldstatus")
-        var oldrpm= getIntent().getStringExtra("oldrpm")
-        var oldhm= getIntent().getStringExtra("oldhm")
-        var oldfuel= getIntent().getStringExtra("oldfuel")
-        var oldengine= getIntent().getStringExtra("oldengine")
-        var oldpreasure= getIntent().getStringExtra("oldpreasure")
-        var olddebit= getIntent().getStringExtra("olddebit")
-        var oldelevasi= getIntent().getStringExtra("oldelevasi")
-        var oldtanggal= getIntent().getStringExtra("oldtanggal")
+        var oldstatus = getIntent().getStringExtra("oldstatus")
+        var oldrpm = getIntent().getStringExtra("oldrpm")
+        var oldhm = getIntent().getStringExtra("oldhm")
+        var oldfuel = getIntent().getStringExtra("oldfuel")
+        var oldengine = getIntent().getStringExtra("oldengine")
+        var oldpreasure = getIntent().getStringExtra("oldpreasure")
+        var olddebit = getIntent().getStringExtra("olddebit")
+        var oldelevasi = getIntent().getStringExtra("oldelevasi")
+        var oldtanggal = getIntent().getStringExtra("oldtanggal")
 
         if (oldpompa.isNullOrBlank()) {
             button_push.isEnabled = false
         } else {
-            push_tanggal.isEnabled=false
-
-            pushTextPompa.isEnabled=false
-            pushTextShift.isEnabled=false
-            pushTextStatus.isEnabled=false
-            pushTextRpm.isEnabled=false
-            pushTextHm.isEnabled=false
-            pushTextFuel.isEnabled=false
-            pushTextEngine.isEnabled=false
-            pushTextPreasure.isEnabled=false
-            pushTextDebit.isEnabled=false
-            pushTextElevasi.isEnabled=false
+            push_tanggal.isEnabled = false
+            pushTextPompa.isEnabled = false
+            pushTextShift.isEnabled = false
+            pushTextStatus.isEnabled = false
+            pushTextRpm.isEnabled = false
+            pushTextHm.isEnabled = false
+            pushTextFuel.isEnabled = false
+            pushTextEngine.isEnabled = false
+            pushTextPreasure.isEnabled = false
+            pushTextDebit.isEnabled = false
+            pushTextElevasi.isEnabled = false
 
             pushTextPompa.setText(oldpompa)
             pushTextShift.setText(oldshift)
@@ -86,6 +86,7 @@ class PushActivity : AppCompatActivity() {
             pushTextDebit.setText(olddebit)
             pushTextElevasi.setText(oldelevasi)
             pushTextTanggal.setText(oldtanggal)
+
 
             button_push.setOnClickListener {
                 addWp()
@@ -105,24 +106,28 @@ class PushActivity : AppCompatActivity() {
             }
         }
 
-        btnPushTanggal!!.setOnClickListener(object: View.OnClickListener{
+        btnPushTanggal!!.setOnClickListener(object : View.OnClickListener {
             override fun onClick(p0: View?) {
-                DatePickerDialog(this@PushActivity, dateSetListener,
+                DatePickerDialog(
+                    this@PushActivity, dateSetListener,
                     cal.get(Calendar.YEAR),
                     cal.get(Calendar.MONTH),
-                    cal.get(Calendar.DAY_OF_MONTH)).show()
+                    cal.get(Calendar.DAY_OF_MONTH)
+                ).show()
             }
         })
     }
+
     private fun updateDataInView() {
-        val myFormat="yyyy/MM/dd"
+        val myFormat = "yyyy/MM/dd"
 //        val myFormat="day month year"
-        val sdf= SimpleDateFormat(myFormat, Locale.US)
-        pushTanggal!!.text=sdf.format(cal.getTime())
+        val sdf = SimpleDateFormat(myFormat, Locale.US)
+        val sdff = sdf.format(cal.getTime())
+        pushTanggal!!.text = sdff
     }
 
 
-    fun resetdata(){
+    fun resetdata() {
         pushTextShift.text!!.clear()
         pushTextPompa.text!!.clear()
         pushTextStatus.text!!.clear()
@@ -134,8 +139,26 @@ class PushActivity : AppCompatActivity() {
         pushTextDebit.text!!.clear()
         pushTextElevasi.text!!.clear()
         pushTextTanggal.setText("")
+        pushTextKeterangan.text!!.clear()
     }
-    private fun addWp (){
+
+    private fun addWp() {
+
+
+//        val waterpump = ""
+//        val shift = ""
+//        val status = ""
+//        val hm = ""
+//        val rpm = ""
+//        val fuel = ""
+//        val engine = ""
+//        val preasure = ""
+//        val debit = ""
+//        val elevasi = ""
+//        val tanggal = ""
+//        val keterangan = ""
+
+
         val waterpump = pushTextPompa?.getText().toString().trim(){ it <= ' ' }
         val shift = pushTextShift?.getText().toString().trim(){ it <= ' ' }
         val status = pushTextStatus?.getText().toString().trim(){ it <= ' ' }
@@ -147,44 +170,52 @@ class PushActivity : AppCompatActivity() {
         val debit = pushTextDebit?.getText().toString().trim(){ it <= ' ' }
         val elevasi = pushTextElevasi?.getText().toString().trim(){ it <= ' ' }
         val tanggal = pushTextTanggal?.getText().toString().trim(){ it <= ' ' }
+        val keterangan = pushTextKeterangan?.getText().toString().trim(){ it <= ' ' }
 
 
         lateinit var loading: ProgressDialog
-        class Addwp : AsyncTask<Void, Void, String>(){
-            override fun onPreExecute(){
+
+        class Addwp : AsyncTask<Void, Void, String>() {
+            override fun onPreExecute() {
                 super.onPreExecute()
                 loading=
                     ProgressDialog.show(this@PushActivity, "Menambahkan Ke Database", "Sedang Mengunggah", false, false)
             }
-            override fun onPostExecute (s:String){
+
+            override fun onPostExecute(s: String) {
                 super.onPostExecute(s)
                 loading.dismiss()
                 Toast.makeText ( this@PushActivity, s, Toast.LENGTH_LONG).show()
             }
-            override fun doInBackground (vararg v : Void): String{
-                val params= HashMap<String, String?>()
-                params [RetrofitClient.KEY_WP_WP]=waterpump
-                params [RetrofitClient.KEY_WP_shift]=shift
-                params [RetrofitClient.KEY_WP_status]=status
-                params [RetrofitClient.KEY_WP_rpm]=rpm
-                params [RetrofitClient.KEY_WP_hm]=hm
-                params [RetrofitClient.KEY_WP_fuel]=fuel
-                params [RetrofitClient.KEY_WP_engine]=engine
-                params [RetrofitClient.KEY_WP_preasure]=preasure
-                params [RetrofitClient.KEY_WP_debit]=debit
-                params [RetrofitClient.KEY_WP_elevasi]=elevasi
-                params [RetrofitClient.KEY_WP_tanggal]=tanggal
+
+            override fun doInBackground(vararg v: Void): String {
+                val params = HashMap<String, String?>()
+                params[RetrofitClient.KEY_WP_WP] = waterpump
+                params[RetrofitClient.KEY_WP_shift] = shift
+                params[RetrofitClient.KEY_WP_status] = status
+                params[RetrofitClient.KEY_WP_rpm] = rpm
+                params[RetrofitClient.KEY_WP_hm] = hm
+                params[RetrofitClient.KEY_WP_fuel] = fuel
+                params[RetrofitClient.KEY_WP_engine] = engine
+                params[RetrofitClient.KEY_WP_preasure] = preasure
+                params[RetrofitClient.KEY_WP_debit] = debit
+                params[RetrofitClient.KEY_WP_elevasi] = elevasi
+                params[RetrofitClient.KEY_WP_tanggal] = tanggal
+                params[RetrofitClient.KEY_WP_keterangan] = keterangan
 
                 val rh = RequestHandler()
-                return rh.sendPostRequest(RetrofitClient.urlad,params)
+                return rh.sendPostRequest(RetrofitClient.urlad, params)
             }
         }
+
         val aw = Addwp()
         aw.execute()
     }
 
 //    override fun onClick(v: View?) {
-//        if (v=== button_update){
+//        if (v=== button_update) {
 //            addWp()
-
+//        }
 }
+
+

@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="5dp"
+    android:background="@color/colorIjo"
     android:orientation="vertical"
     tools:context=".input.ReportPompaActivity">
     <LinearLayout
@@ -15,16 +16,25 @@
             android:gravity="center"
             android:layout_gravity="center"
             android:orientation="vertical"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="match_parent">
+            <ImageView
+                android:src="@drawable/ic_baseline_screen_rotation_24"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"/>
             <TextView
                 android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:textSize="25sp"
+                android:textColor="@color/black"
                 android:text="Gunakan Mode Landscape"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"/>
             <TextView
                 android:gravity="center"
+                android:textSize="25sp"
+                android:textColor="@color/black"
                 android:text="Untuk Akses Halaman Ini"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>

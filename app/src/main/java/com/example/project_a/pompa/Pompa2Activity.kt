@@ -7,6 +7,7 @@ import android.widget.Adapter
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.project_a.R
 import kotlinx.android.synthetic.main.activity_pompa2.*
+import kotlinx.android.synthetic.main.activity_tower2.*
 import org.jetbrains.anko.db.classParser
 import org.jetbrains.anko.db.select
 

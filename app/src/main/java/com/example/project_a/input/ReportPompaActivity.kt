@@ -4,36 +4,43 @@ import android.app.ProgressDialog
 import android.os.AsyncTask
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Filter
-import android.widget.Filterable
-import android.widget.ListView
-import android.widget.SimpleAdapter
+import android.widget.*
 import com.example.project_a.R
 import com.example.project_a.RequestHandler
 import com.example.project_a.Retrofit.RetrofitClient
+import kotlinx.android.synthetic.main.activity_report_pompa.*
 import org.json.JSONException
 import org.json.JSONObject
 import java.util.ArrayList
 import java.util.HashMap
 
-class ReportPompaActivity : AppCompatActivity(), Filterable {
+class ReportPompaActivity : AppCompatActivity() {
 
-    private var listReport : ListView? = null
+    private var listReport: ListView? = null
     private var JSON_STRING: String? = null
-    private var id:String?=null
+    private var id: String? = null
+
+    //    private var fTanggal : EditText?=null
+//    val fTanggal= 1.toString()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_report_pompa)
 
+//        fTanggal=findViewById(R.id.filter_tanggal) as EditText?
 
-        listReport=findViewById(R.id.listReport) as ListView
+        listReport = findViewById(R.id.listReport) as ListView
 
-        get_JSON()
+        filterTanggal()
+
+        btn_filter.setOnClickListener {
+            get_JSON()
+        }
+//        filterTanggal()
 
     }
 
-    private fun tampil () {
+    private fun tampil() {
         var jsonObject: JSONObject? = null
         val list = ArrayList<HashMap<String, String?>>()
 
@@ -55,6 +62,7 @@ class ReportPompaActivity : AppCompatActivity(), Filterable {
                 val debit = jo.getString(RetrofitClient.TAG_DEBIT)
                 val elevasi = jo.getString(RetrofitClient.TAG_ELEVASI)
                 val tanggal = jo.getString(RetrofitClient.TAG_TANGGAL)
+                val keterangan = jo.getString(RetrofitClient.TAG_KETERANGAN)
 
                 val show = HashMap<String, String?>()
 //                show[RetrofitClient.TAG_ID] = id
@@ -69,14 +77,15 @@ class ReportPompaActivity : AppCompatActivity(), Filterable {
                 show[RetrofitClient.TAG_DEBIT] = debit
                 show[RetrofitClient.TAG_ELEVASI] = elevasi
                 show[RetrofitClient.TAG_TANGGAL] = tanggal
+                show[RetrofitClient.TAG_KETERANGAN] = keterangan
                 list.add(show)
             }
         } catch (e: JSONException) {
             e.printStackTrace()
         }
-        val adapter= SimpleAdapter(
-            this@ReportPompaActivity, list,R.layout.list_report,
-            arrayOf (
+        val adapter = SimpleAdapter(
+            this@ReportPompaActivity, list, R.layout.list_report,
+            arrayOf(
 //                RetrofitClient.TAG_ID,
                 RetrofitClient.TAG_WP,
                 RetrofitClient.TAG_SHIFT,
@@ -88,7 +97,8 @@ class ReportPompaActivity : AppCompatActivity(), Filterable {
                 RetrofitClient.TAG_PREASURE,
                 RetrofitClient.TAG_DEBIT,
                 RetrofitClient.TAG_ELEVASI,
-                RetrofitClient.TAG_TANGGAL
+                RetrofitClient.TAG_TANGGAL,
+                RetrofitClient.TAG_KETERANGAN
             ),
             intArrayOf(
 //                R.id.reportId,
@@ -102,36 +112,76 @@ class ReportPompaActivity : AppCompatActivity(), Filterable {
                 R.id.reportPreasure,
                 R.id.reportDebit,
                 R.id.reportElevasi,
-                R.id.reportTanggal
+                R.id.reportTanggal,
+                R.id.reportKeterangan
             )
         )
         listReport?.setAdapter(adapter)
     }
-    private fun get_JSON(){
-        class GET_JSON : AsyncTask<Void, Void, String>(){
 
-            lateinit var loading : ProgressDialog
-            override fun onPreExecute(){
+    private fun get_JSON() {
+        class GET_JSON : AsyncTask<Void, Void, String>() {
+
+            lateinit var loading: ProgressDialog
+            override fun onPreExecute() {
                 super.onPreExecute()
-                loading=
-                    ProgressDialog.show(this@ReportPompaActivity , "Menampilkan Data", "Tunggu", false, false)
+                loading =
+                    ProgressDialog.show(
+                        this@ReportPompaActivity, "Menampilkan Data", "Tunggu", false, false
+                    )
             }
-            override fun onPostExecute (s:String){
+
+            override fun onPostExecute(s: String) {
                 super.onPostExecute(s)
                 loading.dismiss()
                 JSON_STRING = s
                 tampil()
             }
-            override fun doInBackground (vararg params : Void): String{
+
+            override fun doInBackground(vararg params: Void): String {
                 val rh = RequestHandler()
-                return rh.sendGetRequest(RetrofitClient.urlgetreport,id)
+                return rh.sendGetRequest(RetrofitClient.urlgetreport, id)
             }
         }
+
         val gj = GET_JSON()
         gj.execute()
     }
 
-    override fun getFilter(): Filter {
-        TODO("Not yet implemented")
+    private fun filterTanggal() {
+        val fitertanggal = "1"
+
+
+        lateinit var loading: ProgressDialog
+
+        class addfilter : AsyncTask<Void, Void, String>() {
+            override fun onPreExecute() {
+//                super.onPreExecute()
+//                loading=
+//                    ProgressDialog.show(this@PushActivity, "Menambahkan Ke Database", "Sedang Mengunggah", false, false)
+            }
+
+            override fun onPostExecute(s: String) {
+//                super.onPostExecute(s)
+//                loading.dismiss()
+//                Toast.makeText ( this@PushActivity, s, Toast.LENGTH_LONG).show()
+            }
+
+            override fun doInBackground(vararg v: Void): String {
+                val params = HashMap<String, String?>()
+                params[RetrofitClient.FIL_tanggal] = fitertanggal
+
+                val rh = RequestHandler()
+                return rh.sendPostRequest(RetrofitClient.urlgetreport, params)
+            }
+        }
+        val aw = addfilter()
+        aw.execute()
+
+
+//        println(fitertanggal)
+
+
+
     }
 }

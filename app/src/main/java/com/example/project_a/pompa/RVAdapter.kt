@@ -1,23 +1,13 @@
 package com.example.project_a.pompa
 
-import android.app.AlertDialog
-import android.app.ProgressDialog
 import android.content.Context
-import android.content.DialogInterface
-import android.content.Intent
-import android.os.AsyncTask
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.project_a.R
-import com.example.project_a.RequestHandler
-import com.example.project_a.Retrofit.RetrofitClient
 //import com.example.project_a.input.InputSementaraActivity
-import com.example.project_a.input.Input_Activity
 import com.example.project_a.input.PushActivity
-import com.example.project_a.input.TampilSemuaWpActivity
 import kotlinx.android.synthetic.main.item_list.view.*
 import org.jetbrains.anko.db.delete
 import org.jetbrains.anko.startActivity

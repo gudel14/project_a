@@ -36,20 +36,20 @@ open class Input_Activity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.input_activity)
 
-        editwp= findViewById(R.id.input_wp)as EditText
-        editstatus= findViewById(R.id.input_status)as EditText
-        editshift= findViewById(R.id.input_shift)as EditText
-        edithm= findViewById(R.id.input_hm)as EditText
-        editfuel= findViewById(R.id.input_fuel)as EditText
-        editengine= findViewById(R.id.input_engine)as EditText
-        editpreasure= findViewById(R.id.input_preasure)as EditText
-        editdebit= findViewById(R.id.input_debit)as EditText
-        editelevasi= findViewById(R.id.input_elevasi)as EditText
+        editwp= findViewById<EditText>(R.id.input_wp)
+        editstatus= findViewById<EditText>(R.id.input_status)
+        editshift= findViewById<EditText>(R.id.input_shift)
+        edithm= findViewById<EditText>(R.id.input_hm)
+        editfuel= findViewById<EditText>(R.id.input_fuel)
+        editengine= findViewById<EditText>(R.id.input_engine)
+        editpreasure= findViewById<EditText>(R.id.input_preasure)
+        editdebit= findViewById<EditText>(R.id.input_debit)
+        editelevasi= findViewById<EditText>(R.id.input_elevasi)
 
 //        edittgl= findViewById(R.id.input_tanggal) as DatePicker
 
-        btn_save = findViewById(R.id.btn_save)as Button
-        btn_view = findViewById(R.id.btn_view)as Button
+        btn_save = findViewById<Button>(R.id.btn_save)
+        btn_view = findViewById<Button>(R.id.btn_view)
 
         btn_view!!.setOnClickListener(this)
         btn_save!!.setOnClickListener (this)
@@ -58,15 +58,27 @@ open class Input_Activity : AppCompatActivity(), View.OnClickListener {
 
     private fun addWp (){
 //        val tgl = edittgl?.getTag().toString().trim(){ it <= ' ' }
-        val waterpump = editwp?.getText().toString().trim(){ it <= ' ' }
-        val shift     = editshift?.getText().toString().trim(){ it <= ' ' }
-        val status    = editstatus?.getText().toString().trim(){ it <= ' ' }
-        val hm        = edithm?.getText().toString().trim(){ it <= ' ' }
-        val fuel      = editfuel?.getText().toString().trim(){ it <= ' ' }
-        val engine    = editengine?.getText().toString().trim(){ it <= ' ' }
-        val preasure  = editpreasure?.getText().toString().trim(){ it <= ' ' }
-        val debit     = editdebit?.getText().toString().trim(){ it <= ' ' }
-        val elevasi   = editelevasi?.getText().toString().trim(){ it <= ' ' }
+        val waterpump = "1"
+        val shift     = "1"
+        val status    = "1"
+        val hm        = "1"
+        val fuel      = "1"
+        val engine    = "1"
+        val preasure  ="1"
+        val debit     = "1"
+        val elevasi   = "1"
+
+
+//        val waterpump = editwp?.getText().toString().trim(){ it <= ' ' }
+//        val shift     = editshift?.getText().toString().trim(){ it <= ' ' }
+//        val status    = editstatus?.getText().toString().trim(){ it <= ' ' }
+//        val hm        = edithm?.getText().toString().trim(){ it <= ' ' }
+//        val fuel      = editfuel?.getText().toString().trim(){ it <= ' ' }
+//        val engine    = editengine?.getText().toString().trim(){ it <= ' ' }
+//        val preasure  = editpreasure?.getText().toString().trim(){ it <= ' ' }
+//        val debit     = editdebit?.getText().toString().trim(){ it <= ' ' }
+//        val elevasi   = editelevasi?.getText().toString().trim(){ it <= ' ' }
+
 
         lateinit var loading:ProgressDialog
         class Addwp : AsyncTask<Void, Void, String>(){

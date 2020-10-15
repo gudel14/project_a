@@ -11,33 +11,30 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".input.HapusReportActivity"></activity>
+        <activity android:name=".towerlamp.PushLamp"></activity>
+        <activity android:name=".pompa.Tower2Activity" />
+        <activity android:name=".pompa.TowerActivity" />
+        <activity android:name=".input.HapusReportActivity" />
         <activity android:name=".input.ShowReportPompaActivity" />
-        <activity android:name=".input.ReportPompaActivity">
-
-        </activity>
-        <activity android:name=".input.PushActivity">
-
-        </activity>
+        <activity android:name=".input.ReportPompaActivity" />
+        <activity android:name=".input.PushActivity"></activity>
         <activity android:name=".nav_pompa.NavActivity" />
         <activity android:name=".pompa.Pompa2Activity" />
-        <activity android:name=".pompa.PompaActivity">
-
-        </activity>
-        <activity android:name=".input.TampilWpActivity"/>
+        <activity android:name=".pompa.PompaActivity" />
+        <activity android:name=".input.TampilWpActivity" />
         <activity android:name=".input.TampilSemuaWpActivity" />
-        <activity android:name=".input.Input_Activity">
-
-        </activity>
-        <activity android:name=".Dashboard_Activity">
-        </activity>
-        <activity android:name=".Daftar_Activity"
-            android:windowSoftInputMode="adjustResize"/>
-        <activity android:name=".LoginActivity"
-            android:windowSoftInputMode="adjustResize"/>
+        <activity android:name=".input.Input_Activity" />
+        <activity android:name=".Dashboard_Activity" />
+        <activity
+            android:name=".Daftar_Activity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".LoginActivity"
+            android:windowSoftInputMode="adjustResize" />
         <activity android:name=".Splash_Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

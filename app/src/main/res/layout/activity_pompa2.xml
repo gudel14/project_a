@@ -7,11 +7,34 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".pompa.Pompa2Activity">
-    <Button
-        android:id="@+id/kembali"
-        android:text="input data"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <LinearLayout
+            android:id="@+id/kembali"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:src="@drawable/ic_baseline_navigate_before_24"
+                android:layout_gravity="center"
+                android:layout_width="35dp"
+                android:layout_height="35dp"/>
+            <TextView
+                android:text="INPUT DATA"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
     <ScrollView
         android:background="@drawable/layer_inputwp"
         android:layout_width="match_parent"

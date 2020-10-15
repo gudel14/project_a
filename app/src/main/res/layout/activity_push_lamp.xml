@@ -64,15 +64,17 @@
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-
-
-
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/pushTextPompa"
-                        android:hint="Pompa"
+                        android:id="@+id/textLampPush"
+                        android:hint="TL"
+                        android:textSize="15sp"
+                        android:outlineProvider="bounds"
+                        android:maxLength="6"
+                        android:inputType="textCapCharacters"
+                        android:singleLine="true"
                         android:textColor="@color/colorPrimary"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
@@ -83,8 +85,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/pushTextShift"
-                        android:hint="Shift"
+                        android:id="@+id/textShiftPush"
+                        android:hint="SHIFT"
+                        android:textSize="15sp"
+                        android:maxLength="1"
+                        android:inputType="phone"
+                        android:singleLine="true"
                         android:textColor="@color/colorPrimary"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
@@ -95,38 +101,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/pushTextStatus"
-                        android:hint="Status"
+                        android:id="@+id/textStatusPush"
+                        android:hint="STATUS"
+                        android:textSize="15sp"
+                        android:maxLength="3"
+                        android:inputType="textCapCharacters"
+                        android:singleLine="true"
                         android:textColor="@color/colorPrimary"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
                     </com.google.android.material.textfield.TextInputEditText>
                 </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/pushTextRpm"
-                        android:hint="RPM"
-                        android:textColor="@color/colorPrimary"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-                    </com.google.android.material.textfield.TextInputEditText>
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/pushTextHm"
-                        android:hint="HM"
-                        android:textColor="@color/colorPrimary"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-                    </com.google.android.material.textfield.TextInputEditText>
-                </com.google.android.material.textfield.TextInputLayout>
-
             </LinearLayout>
 
             <LinearLayout
@@ -138,11 +123,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/pushTextFuel"
-                    android:hint="Fuel Rate"
-                    android:textColor="@color/colorPrimary"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                        android:id="@+id/textHmPush"
+                        android:hint="HM"
+                        android:maxLength="3"
+                        android:textSize="15sp"
+                        android:inputType="phone"
+                        android:singleLine="true"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
                     </com.google.android.material.textfield.TextInputEditText>
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -150,49 +139,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/pushTextEngine"
-                    android:hint="Engine Load"
-                    android:textColor="@color/colorPrimary"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    </com.google.android.material.textfield.TextInputEditText>
-                </com.google.android.material.textfield.TextInputLayout>
-
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/pushTextPreasure"
-                    android:hint="Preasure Gauge"
-                    android:textColor="@color/colorPrimary"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    </com.google.android.material.textfield.TextInputEditText>
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/pushTextDebit"
-                    android:hint="Debit"
-                    android:textColor="@color/colorPrimary"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    </com.google.android.material.textfield.TextInputEditText>
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/pushTextElevasi"
-                    android:hint="Elevasi"
-                    android:textColor="@color/colorPrimary"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="20dp">
+                        android:id="@+id/textFuelPush"
+                        android:hint="Fuel (%)"
+                        android:textSize="15sp"
+                        android:maxLength="3"
+                        android:inputType="phone"
+                        android:singleLine="true"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
                     </com.google.android.material.textfield.TextInputEditText>
                 </com.google.android.material.textfield.TextInputLayout>
             </LinearLayout>
@@ -220,7 +175,6 @@
                 android:layout_height="wrap_content"/>
         </LinearLayout>
 
-
         <Button
             android:id="@+id/button_push"
             android:text="PUSH"
@@ -233,6 +187,5 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
     </LinearLayout>
-
 
 </LinearLayout>

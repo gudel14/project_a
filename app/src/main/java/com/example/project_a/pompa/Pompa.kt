@@ -30,9 +30,4 @@ data class Pompa (
         const val ELEVASI:String ="Elevasi"
         const val TANGGAL:String ="Tanggal"
     }
-
-
-
-
-
 }
