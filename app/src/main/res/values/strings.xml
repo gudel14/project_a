@@ -3,15 +3,9 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
-    <string-array name="wp">
-        <item>WP7105</item>
-        <item>WP7107</item>
-        <item>WP7103</item>
-        <item>WP7113</item>
-        <item>WP7104</item>
-        <item>WP779</item>
-        <item>WP780</item>
-        <item>WP718</item>
+    <string-array name="spiner">
+        <item>Baik/Normal</item>
+        <item>Rusak/Abnormal</item>
     </string-array>
 
 </resources>

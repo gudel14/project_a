@@ -35,7 +35,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
                     <TextView
-                        android:id="@+id/tlupdate_tanggal"
+                        android:id="@+id/cekTanggal"
                         android:textColor="@color/black"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
@@ -45,7 +45,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <TextView
-                        android:text="TL"
+                        android:text="POMPA"
                         android:layout_marginRight="15dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
@@ -55,7 +55,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
                     <TextView
-                        android:id="@+id/tlupdate_tl"
+                        android:id="@+id/cekPompa"
                         android:textColor="@color/black"
                         android:background="#FFEB3B"
                         android:layout_width="match_parent"
@@ -75,7 +75,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
                     <TextView
-                        android:id="@+id/tlupdate_shift"
+                        android:id="@+id/cekShift"
                         android:textColor="@color/black"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
@@ -85,7 +85,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <TextView
-                        android:text="Status"
+                        android:text="NAMA"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
                     <TextView
@@ -94,7 +94,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
                     <TextView
-                        android:id="@+id/tlupdate_status"
+                        android:id="@+id/cekNama"
                         android:textColor="@color/black"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
@@ -113,30 +113,12 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
                     <TextView
-                        android:id="@+id/tlupdate_hm"
+                        android:id="@+id/cekHm"
                         android:textColor="@color/black"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
                 </TableRow>
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <TextView
-                        android:text="Fuel"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
-                    <TextView
-                        android:text=":"
-                        android:layout_marginRight="3dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
-                    <TextView
-                        android:id="@+id/tlupdate_fuel"
-                        android:textColor="@color/black"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
-                </TableRow>
             </TableLayout>
 
         </LinearLayout>
@@ -145,20 +127,16 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <Button
-                android:id="@+id/tlupdate_btnedit"
-                android:layout_weight="1"
-                android:text="Edit"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-            <Button
-                android:id="@+id/tlupdate_btnhapus"
+                android:id="@+id/cek_btnhapus"
                 android:layout_weight="1"
                 android:text="Hapus"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
+
             <Button
-                android:id="@+id/tlupdate_btnpush"
+                android:id="@+id/cek_btnpush"
                 android:layout_weight="1"
                 android:text="Push"
                 android:layout_width="match_parent"

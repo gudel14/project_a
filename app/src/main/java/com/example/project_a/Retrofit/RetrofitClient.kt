@@ -29,17 +29,24 @@ object RetrofitClient {
 //    val urldeletewp ="https://gudelabok.000webhostapp.com/hapuswp.php?id="
 //    val urlupdatewp ="https://gudelabok.000webhostapp.com/updatewp.php?id="
 
-    val urlad           ="http://192.168.43.146/project_a/input_wp.php"
-    val urlgetall       ="http://192.168.43.146/project_a/tampilsemuawp.php"
-    val urlgetreport    ="http://192.168.43.146/project_a/tampilreport.php"
-    val urlgetwp        ="http://192.168.43.146/project_a/tampilwp.php?id="
-    val urldeletewp     ="http://192.168.43.146/project_a/hapuswp.php?id="
-    val urlupdatewp     ="http://192.168.43.146/project_a/updatewp.php?id="
+    val urlad           ="http://192.168.77.130/project_a/input_wp.php"
+    val urlgetall       ="http://192.168.77.130/project_a/tampilsemuawp.php"
+    val urlgetreport    ="http://192.168.77.130/project_a/tampilreport.php"
+    val urlgetwp        ="http://192.168.77.130/project_a/tampilwp.php?id="
+    val urldeletewp     ="http://192.168.77.130/project_a/hapuswp.php?id="
+    val urlupdatewp     ="http://192.168.77.130/project_a/updatewp.php?id="
 
 
-    val urladtl     ="http://192.168.43.146/project_a/tl_input.php?id="
-    val urldeletetl     ="http://192.168.43.146/project_a/tl_hapus.php?id="
-//    val urlupdatetl     ="http://192.168.43.146/project_a/tl.php?id="
+
+    val urladtl                 ="http://192.168.43.146/project_a/tl_input.php?id="
+    val urldeletetl             ="http://192.168.43.146/project_a/tl_hapus.php?id="
+    val url_tl_tampil_semua     ="http://192.168.43.146/project_a/tl_tampil_semua.php"
+//    val urlupdatetl     ="http://192.168.159.130/project_a/tl.php?id="
+
+
+    val urladcek           ="http://192.168.31.130/project_a/cek_input.php?id="
+    val urlgetallcek       ="http://192.168.31.130/project_a/cek_tampil_semua.php?id="
+
 
 
     //yg ke 2 : karna kita select nya per ID di field tabel, jadi kita tambah url nya pakai id (yg di deklarasikan di ApiService)
@@ -59,8 +66,8 @@ object RetrofitClient {
 
     val FIL_tanggal = "filter"
 
-    const val KEY_TL_ID = "id"
-    val KEY_TL_WP = "water_pump"
+    val KEY_TL_ID = "id"
+    val KEY_TL_WP = "lamp"
     val KEY_TL_status = "status"
     val KEY_TL_shift = "shift"
     val KEY_TL_hm = "hm"
@@ -68,6 +75,13 @@ object RetrofitClient {
     val KEY_TL_tanggal = "tanggal"
 
 
+    val TAG_TL_ID = "id"
+    val TAG_TL_WP = "lamp"
+    val TAG_TL_status = "status"
+    val TAG_TL_shift = "shift"
+    val TAG_TL_hm = "hm"
+    val TAG_TL_fuel = "fuel"
+    val TAG_TL_tanggal = "tanggal"
 
 
     val TAG_JSON_ARRAY = "result"
@@ -87,8 +101,19 @@ object RetrofitClient {
     val WP_ID = "wp_id"
 
 
+    val KEY_CEK_ID = "id"
+    val KEY_CEK_pompa = "pompa"
+    val KEY_CEK_shift = "shift"
+    val KEY_CEK_nama = "nama"
+    val KEY_CEK_hm = "hm"
+    val KEY_CEK_tanggal = "tanggal"
 
 
-
+    val TAG_CEK_ID = "id"
+    val TAG_CEK_pompa = "pompa"
+    val TAG_CEK_shift = "shift"
+    val TAG_CEK_nama = "nama"
+    val TAG_CEK_hm = "hm"
+    val TAG_CEK_tanggal = "tanggal"
 
 }

@@ -1,14 +1,23 @@
 package com.example.project_a.towerlamp
 
 import android.app.DatePickerDialog
+import android.app.ProgressDialog
+import android.content.Intent
+import android.os.AsyncTask
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.DatePicker
 import android.widget.TextView
+import android.widget.Toast
 import com.example.project_a.R
+import com.example.project_a.RequestHandler
+import com.example.project_a.Retrofit.RetrofitClient
+import com.example.project_a.input.ShowReportPompaActivity
+import kotlinx.android.synthetic.main.activity_push.*
 import kotlinx.android.synthetic.main.activity_push_lamp.*
+import kotlinx.android.synthetic.main.activity_push_lamp.button_push
 import kotlinx.android.synthetic.main.activity_tower.*
 import java.text.SimpleDateFormat
 import java.util.*
@@ -37,13 +46,28 @@ class PushLamp : AppCompatActivity() {
         if (oldlamp.isNullOrBlank()) {
             tlbutton_update.isEnabled = false
         } else {
+            textShiftPush.isEnabled= false
+            textHmPush.isEnabled= false
+            textFuelPush.isEnabled= false
+            textStatusPush.isEnabled= false
+            pushTextTanggal.isEnabled= false
             textLampPush.isEnabled= false
+
             textLampPush.setText(oldlamp)
             textShiftPush.setText(oldshift)
             textHmPush.setText(oldhm)
             textFuelPush.setText(oldfuel)
             textStatusPush.setText(oldstatus)
             pushTextTanggal.setText(oldtanggal)
+
+            button_push.setOnClickListener {
+                addTl()
+//                resetdata()
+            }
+            button_tl_lihat.setOnClickListener {
+                startActivity(Intent(this, LihatLampActivity::class.java))
+            }
+
         }
 
         val dateSetListener = object : DatePickerDialog.OnDateSetListener {
@@ -74,4 +98,50 @@ class PushLamp : AppCompatActivity() {
         val sdff = sdf.format(cal.getTime())
         pushTanggal!!.text = sdff
     }
+
+
+    private fun addTl(){
+
+        val towerlamp = textLampPush?.getText().toString().trim(){ it <= ' ' }
+        val shift = textShiftPush?.getText().toString().trim(){ it <= ' ' }
+        val status = textStatusPush?.getText().toString().trim(){ it <= ' ' }
+        val hm = textHmPush?.getText().toString().trim(){ it <= ' ' }
+        val fuel = textFuelPush?.getText().toString().trim(){ it <= ' ' }
+        val tanggal = pushTextTanggal?.getText().toString().trim(){ it <= ' ' }
+
+        lateinit var loading: ProgressDialog
+
+        class Addwp : AsyncTask<Void, Void, String>() {
+            override fun onPreExecute() {
+                super.onPreExecute()
+                loading=
+                    ProgressDialog.show(this@PushLamp, "Menambahkan Ke Database", "Sedang Mengunggah", false, false)
+            }
+
+            override fun onPostExecute(s: String) {
+                super.onPostExecute(s)
+                loading.dismiss()
+                Toast.makeText ( this@PushLamp, s, Toast.LENGTH_LONG).show()
+            }
+
+            override fun doInBackground(vararg v: Void): String {
+                val params = HashMap<String, String?>()
+                params[RetrofitClient.KEY_TL_WP] = towerlamp
+                params[RetrofitClient.KEY_TL_shift] = shift
+                params[RetrofitClient.KEY_TL_status] = status
+                params[RetrofitClient.KEY_TL_hm] = hm
+                params[RetrofitClient.KEY_TL_fuel] = fuel
+                params[RetrofitClient.KEY_TL_tanggal] = tanggal
+
+                val rh = RequestHandler()
+                return rh.sendPostRequest(RetrofitClient.urladtl, params)
+            }
+        }
+
+        val aw = Addwp()
+        aw.execute()
+    }
+
+
+
 }

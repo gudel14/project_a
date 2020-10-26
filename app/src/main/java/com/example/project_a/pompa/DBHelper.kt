@@ -41,11 +41,22 @@ class DBHelper (ctx:Context):ManagedSQLiteOpenHelper(ctx,"Pompa.db, null, 1") {
             Tower.HM to TEXT,
             Tower.FUEL to TEXT
         )
+
+        p0?.createTable(Cek.Tabel_Cek, true,
+            Cek.ID to INTEGER+ PRIMARY_KEY+ AUTOINCREMENT,
+            Cek.POMPA to TEXT,
+            Cek.SHIFT to TEXT,
+            Cek.TANGGAL to TEXT,
+            Cek.HM to TEXT,
+            Cek.NAMA to TEXT
+
+        )
     }
 
     override fun onUpgrade(p0: SQLiteDatabase?, p1: Int, p2: Int) {
         p0?.dropTable(Pompa.Tabel_Pompa, true)
         p0?.dropTable(Tower.Tabel_Tower, true)
+        p0?.dropTable(Cek.Tabel_Cek, true)
 
     }
 }

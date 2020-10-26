@@ -63,10 +63,8 @@ class TowerAdapter(val context: Context, val item: ArrayList<Tower>)
                 )
                 return@setOnClickListener
             }
-
         }
     }
-
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder{
         return ViewHolder(

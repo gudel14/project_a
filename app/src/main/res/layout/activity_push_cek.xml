@@ -41,7 +41,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <TextView
-                android:id="@+id/pushTextTanggall"
+                android:id="@+id/pushcekTanggal"
                 android:hint="Tanggal"
                 android:layout_weight="1"
                 android:textSize="15sp"
@@ -49,7 +49,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
             <Button
-                android:id="@+id/push_tanggall"
+                android:id="@+id/pushcek_tanggal"
                 android:text="pilih"
                 android:layout_weight="2"
                 android:layout_width="match_parent"
@@ -64,17 +64,15 @@
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
+
+
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/textLampPush"
-                        android:hint="TL"
-                        android:textSize="15sp"
-                        android:outlineProvider="bounds"
-                        android:maxLength="6"
-                        android:inputType="textCapCharacters"
-                        android:singleLine="true"
+                        android:id="@+id/pushcekPompa"
+                        android:hint="Pompa"
                         android:textColor="@color/colorPrimary"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
@@ -85,33 +83,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/textShiftPush"
-                        android:hint="SHIFT"
-                        android:textSize="15sp"
-                        android:maxLength="1"
-                        android:inputType="phone"
-                        android:singleLine="true"
+                        android:id="@+id/pushcekShift"
+                        android:hint="Shift"
                         android:textColor="@color/colorPrimary"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
                     </com.google.android.material.textfield.TextInputEditText>
                 </com.google.android.material.textfield.TextInputLayout>
 
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/textStatusPush"
-                        android:hint="STATUS"
-                        android:textSize="15sp"
-                        android:maxLength="3"
-                        android:inputType="textCapCharacters"
-                        android:singleLine="true"
-                        android:textColor="@color/colorPrimary"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-                    </com.google.android.material.textfield.TextInputEditText>
-                </com.google.android.material.textfield.TextInputLayout>
+
             </LinearLayout>
 
             <LinearLayout
@@ -123,12 +103,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/textHmPush"
+                        android:id="@+id/pushcekHM"
                         android:hint="HM"
-                        android:maxLength="3"
-                        android:textSize="15sp"
-                        android:inputType="phone"
-                        android:singleLine="true"
                         android:textColor="@color/colorPrimary"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
@@ -139,17 +115,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/textFuelPush"
-                        android:hint="Fuel (%)"
-                        android:textSize="15sp"
-                        android:maxLength="3"
-                        android:inputType="phone"
-                        android:singleLine="true"
+                        android:id="@+id/pushcekNama"
+                        android:hint="NAMA"
                         android:textColor="@color/colorPrimary"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
                     </com.google.android.material.textfield.TextInputEditText>
                 </com.google.android.material.textfield.TextInputLayout>
+
+
+
             </LinearLayout>
 
         </LinearLayout>
@@ -172,20 +147,22 @@
                 android:background="@null"
                 android:maxLength="86"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="match_parent"/>
         </LinearLayout>
 
+
         <Button
-            android:id="@+id/button_push"
+            android:id="@+id/buttoncek_push"
             android:text="PUSH"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
         <Button
-            android:id="@+id/button_tl_lihat"
+            android:id="@+id/buttoncek_lihat"
             android:text="LIHAT"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
     </LinearLayout>
+
 
 </LinearLayout>
