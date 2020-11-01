@@ -11,7 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".p2h.show_report_cek"></activity>
+        <activity android:name=".p2h.Show_cek"></activity>
         <activity android:name=".p2h.PushCek" />
         <activity android:name=".p2h.CekCekActivity" />
         <activity android:name=".p2h.CekHarianActivity">
@@ -33,7 +33,7 @@
         <activity android:name=".input.TampilWpActivity" />
         <activity android:name=".input.TampilSemuaWpActivity" />
         <activity android:name=".input.Input_Activity" />
-        <activity android:name=".Dashboard_Activity" >
+        <activity android:name=".Dashboard_Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

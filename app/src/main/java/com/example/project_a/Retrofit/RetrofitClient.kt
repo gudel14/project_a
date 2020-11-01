@@ -22,31 +22,30 @@ object RetrofitClient {
     //192.168.43.146 hp samsung 192.168.43.146
     //192.168.43.130 hp google pixel
 
-//    val urlad ="https://gudelabok.000webhostapp.com/input_wp.php"
-//    val urlgetall = "https://gudelabok.000webhostapp.com/tampilsemuawp.php"
-//    val urlgetreport = "https://gudelabok.000webhostapp.com/tampilreport.php"
-//    val urlgetwp ="https://gudelabok.000webhostapp.com/tampilwp.php?id="
-//    val urldeletewp ="https://gudelabok.000webhostapp.com/hapuswp.php?id="
-//    val urlupdatewp ="https://gudelabok.000webhostapp.com/updatewp.php?id="
+//    val urlad         ="https://gudelabok.000webhostapp.com/input_wp.php"
+//    val urlgetall     ="https://gudelabok.000webhostapp.com/tampilsemuawp.php"
+//    val urlgetreport  ="https://gudelabok.000webhostapp.com/tampilreport.php"
+//    val urlgetwp      ="https://gudelabok.000webhostapp.com/tampilwp.php?id="
+//    val urldeletewp   ="https://gudelabok.000webhostapp.com/hapuswp.php?id="
+//    val urlupdatewp   ="https://gudelabok.000webhostapp.com/updatewp.php?id="
 
-    val urlad           ="http://192.168.77.130/project_a/input_wp.php"
-    val urlgetall       ="http://192.168.77.130/project_a/tampilsemuawp.php"
-    val urlgetreport    ="http://192.168.77.130/project_a/tampilreport.php"
-    val urlgetwp        ="http://192.168.77.130/project_a/tampilwp.php?id="
-    val urldeletewp     ="http://192.168.77.130/project_a/hapuswp.php?id="
-    val urlupdatewp     ="http://192.168.77.130/project_a/updatewp.php?id="
+    val urlad           ="http://192.168.16.130/project_a/input_wp.php"
+    val urlgetall       ="http://192.168.16.130/project_a/tampilsemuawp.php"
+    val urlgetreport    ="http://192.168.16.130/project_a/tampilreport.php"
+    val urlgetwp        ="http://192.168.16.130/project_a/tampilwp.php?id="
+    val urldeletewp     ="http://192.168.16.130/project_a/hapuswp.php?id="
+    val urlupdatewp     ="http://192.168.16.130/project_a/updatewp.php?id="
 
 
 
-    val urladtl                 ="http://192.168.43.146/project_a/tl_input.php?id="
-    val urldeletetl             ="http://192.168.43.146/project_a/tl_hapus.php?id="
-    val url_tl_tampil_semua     ="http://192.168.43.146/project_a/tl_tampil_semua.php"
+    val urladtl                 ="http://192.168.16.130/project_a/tl_input.php?id="
+    val urldeletetl             ="http://192.168.16.130/project_a/tl_hapus.php?id="
+    val url_tl_tampil_semua     ="http://192.168.16.130/project_a/tl_tampil_semua.php"
 //    val urlupdatetl     ="http://192.168.159.130/project_a/tl.php?id="
 
 
-    val urladcek           ="http://192.168.31.130/project_a/cek_input.php?id="
-    val urlgetallcek       ="http://192.168.31.130/project_a/cek_tampil_semua.php?id="
-
+    val urladcek           ="http://192.168.16.130/project_a/cek_input.php?id="
+    val urlgetallcek       ="http://192.168.16.130/project_a/cek_tampil_semua.php"
 
 
     //yg ke 2 : karna kita select nya per ID di field tabel, jadi kita tambah url nya pakai id (yg di deklarasikan di ApiService)

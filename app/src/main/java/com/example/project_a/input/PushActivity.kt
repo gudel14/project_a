@@ -2,6 +2,7 @@ package com.example.project_a.input
 
 import android.app.DatePickerDialog
 import android.app.ProgressDialog
+//import android.app.ProgressDialog
 import android.content.Intent
 import android.os.AsyncTask
 import androidx.appcompat.app.AppCompatActivity
@@ -14,17 +15,10 @@ import android.widget.Toast
 import com.example.project_a.R
 import com.example.project_a.RequestHandler
 import com.example.project_a.Retrofit.RetrofitClient
-import com.example.project_a.pompa.Pompa
-import com.example.project_a.pompa.Pompa2Activity
-import com.example.project_a.pompa.database
-import kotlinx.android.synthetic.main.activity_pompa.*
-import kotlinx.android.synthetic.main.activity_pompa.editTextPompa
-import kotlinx.android.synthetic.main.activity_pompa.editTextShift
-import kotlinx.android.synthetic.main.activity_pompa.editTextStatus
 import kotlinx.android.synthetic.main.activity_push.*
-import org.jetbrains.anko.db.insert
-import org.jetbrains.anko.startActivity
-import org.jetbrains.anko.toast
+import kotlinx.android.synthetic.main.activity_push.button_push
+import kotlinx.android.synthetic.main.activity_push.pushTextKeterangan
+import kotlinx.android.synthetic.main.activity_push.push_tanggal
 import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.HashMap
@@ -40,13 +34,11 @@ class PushActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_push)
 
-
         //-------------------------------------------------------
         pushTanggal = findViewById(R.id.pushTextTanggal) as TextView
         btnPushTanggal = findViewById(R.id.push_tanggal) as Button
 
         //-------------------------------------------------------
-
 
         var oldpompa = getIntent().getStringExtra("oldpompa")
         var oldshift = getIntent().getStringExtra("oldshift")
@@ -93,7 +85,7 @@ class PushActivity : AppCompatActivity() {
                 resetdata()
             }
             button_push_lihat.setOnClickListener {
-                startActivity(Intent(this, ShowReportPompaActivity::class.java))
+                startActivity(Intent(this,ShowReportPompaActivity::class.java))
             }
         }
 

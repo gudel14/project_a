@@ -2,17 +2,16 @@ package com.example.project_a.input
 
 import android.app.ProgressDialog
 import android.os.AsyncTask
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.*
+import android.widget.ListView
+import android.widget.SimpleAdapter
+import androidx.appcompat.app.AppCompatActivity
 import com.example.project_a.R
 import com.example.project_a.RequestHandler
 import com.example.project_a.Retrofit.RetrofitClient
-import kotlinx.android.synthetic.main.activity_report_pompa.*
 import org.json.JSONException
 import org.json.JSONObject
-import java.util.ArrayList
-import java.util.HashMap
+import java.util.*
 
 class ReportPompaActivity : AppCompatActivity() {
 
@@ -31,15 +30,15 @@ class ReportPompaActivity : AppCompatActivity() {
 
         listReport = findViewById(R.id.listReport) as ListView
 
-        filterTanggal()
-
-        btn_filter.setOnClickListener {
-            get_JSON()
-        }
 //        filterTanggal()
 
-    }
 
+            get_JSON()
+
+
+//
+    }
+//
     private fun tampil() {
         var jsonObject: JSONObject? = null
         val list = ArrayList<HashMap<String, String?>>()
@@ -65,7 +64,7 @@ class ReportPompaActivity : AppCompatActivity() {
                 val keterangan = jo.getString(RetrofitClient.TAG_KETERANGAN)
 
                 val show = HashMap<String, String?>()
-//                show[RetrofitClient.TAG_ID] = id
+                show[RetrofitClient.TAG_ID] = id
                 show[RetrofitClient.TAG_WP] = wp
                 show[RetrofitClient.TAG_SHIFT] = shift
                 show[RetrofitClient.TAG_STATUS] = status
@@ -118,7 +117,7 @@ class ReportPompaActivity : AppCompatActivity() {
         )
         listReport?.setAdapter(adapter)
     }
-
+//
     private fun get_JSON() {
         class GET_JSON : AsyncTask<Void, Void, String>() {
 
@@ -148,40 +147,35 @@ class ReportPompaActivity : AppCompatActivity() {
         gj.execute()
     }
 
-    private fun filterTanggal() {
-        val fitertanggal = "1"
+//
+//
+//        lateinit var loading: ProgressDialog
+//
+//        class addfilter : AsyncTask<Void, Void, String>() {
+//            override fun onPreExecute() {
+////                super.onPreExecute()
+////                loading=
+////                    ProgressDialog.show(this@PushActivity, "Menambahkan Ke Database", "Sedang Mengunggah", false, false)
+//            }
+//
+//            override fun onPostExecute(s: String) {
+////                super.onPostExecute(s)
+////                loading.dismiss()
+////                Toast.makeText ( this@PushActivity, s, Toast.LENGTH_LONG).show()
+//            }
+//
+//            override fun doInBackground(vararg v: Void): String {
+//                val params = HashMap<String, String?>()
+//                params[RetrofitClient.FIL_tanggal] = fitertanggal
+//
+//                val rh = RequestHandler()
+//                return rh.sendPostRequest(RetrofitClient.urlgetreport, params)
+//            }
+//        }
+//        val aw = addfilter()
+//        aw.execute()
+//
 
 
-        lateinit var loading: ProgressDialog
-
-        class addfilter : AsyncTask<Void, Void, String>() {
-            override fun onPreExecute() {
-//                super.onPreExecute()
-//                loading=
-//                    ProgressDialog.show(this@PushActivity, "Menambahkan Ke Database", "Sedang Mengunggah", false, false)
-            }
-
-            override fun onPostExecute(s: String) {
-//                super.onPostExecute(s)
-//                loading.dismiss()
-//                Toast.makeText ( this@PushActivity, s, Toast.LENGTH_LONG).show()
-            }
-
-            override fun doInBackground(vararg v: Void): String {
-                val params = HashMap<String, String?>()
-                params[RetrofitClient.FIL_tanggal] = fitertanggal
-
-                val rh = RequestHandler()
-                return rh.sendPostRequest(RetrofitClient.urlgetreport, params)
-            }
-        }
-        val aw = addfilter()
-        aw.execute()
-
-
-//        println(fitertanggal)
-
-
-
-    }
 }
+

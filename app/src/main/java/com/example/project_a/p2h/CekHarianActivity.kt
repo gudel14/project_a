@@ -62,7 +62,7 @@ class CekHarianActivity : AppCompatActivity() {
 
 
     private fun updateDataInView() {
-        val myFormat="dd MMM yy"
+        val myFormat="yyyy/MM/dd"
         val sdf= SimpleDateFormat(myFormat, Locale.US)
         cektext_Tanggal!!.text=sdf.format(cal.getTime())
     }

@@ -5,9 +5,9 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".input.show_report_cek">
+    tools:context=".p2h.Show_cek">
     <ListView
-        android:id="@+id/listviewcekk"
+        android:id="@+id/listviewcek"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 

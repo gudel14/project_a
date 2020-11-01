@@ -9,6 +9,7 @@ import android.widget.Toast
 import com.example.project_a.input.Input_Activity
 import com.example.project_a.input.ReportPompaActivity
 import com.example.project_a.input.TampilSemuaWpActivity
+import com.example.project_a.p2h.CekHarianActivity
 import com.example.project_a.pompa.PompaActivity
 import com.example.project_a.pompa.TowerActivity
 import kotlinx.android.synthetic.main.dashboard_activity.*
@@ -34,9 +35,9 @@ class Dashboard_Activity : AppCompatActivity() {
             startActivity(Intent(this, TowerActivity::class.java))
         }
 
-//        card_tentang.setOnClickListener {
-//            startActivity(Intent(this, Input_Activity::class.java))
-//        }
+        card_tentang.setOnClickListener {
+            startActivity(Intent(this, CekHarianActivity::class.java))
+        }
 
         preferences = getSharedPreferences("SHARED_PREF", Context.MODE_PRIVATE)
 

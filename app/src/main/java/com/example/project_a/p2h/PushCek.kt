@@ -9,8 +9,6 @@ import android.widget.Toast
 import com.example.project_a.R
 import com.example.project_a.RequestHandler
 import com.example.project_a.Retrofit.RetrofitClient
-import com.example.project_a.input.ShowReportPompaActivity
-import kotlinx.android.synthetic.main.activity_push.*
 import kotlinx.android.synthetic.main.activity_push_cek.*
 
 class PushCek : AppCompatActivity() {
@@ -39,7 +37,7 @@ class PushCek : AppCompatActivity() {
 //                        resetdata()
         }
         buttoncek_lihat.setOnClickListener {
-            startActivity(Intent(this, show_report_cek::class.java))
+            startActivity(Intent(this,Show_cek::class.java))
         }
     }
 
