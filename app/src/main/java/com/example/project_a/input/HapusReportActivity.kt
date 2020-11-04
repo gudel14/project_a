@@ -5,35 +5,35 @@ import android.app.ProgressDialog
 import android.content.DialogInterface
 import android.content.Intent
 import android.os.AsyncTask
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.example.project_a.R
 import com.example.project_a.RequestHandler
 import com.example.project_a.Retrofit.RetrofitClient
 import kotlinx.android.synthetic.main.activity_hapus_report.*
-import kotlinx.android.synthetic.main.activity_tampil_wp.*
 import org.json.JSONException
 import org.json.JSONObject
 
 class HapusReportActivity : AppCompatActivity(), View.OnClickListener {
 
     private var id_id : EditText?=null
-    private var wp : EditText?=null
-    private var shift : EditText?=null
-    private var status : EditText?=null
-    private var hm : EditText?=null
-    private var rpm : EditText?=null
-    private var fuel : EditText?=null
-    private var engine : EditText?=null
-    private var preasure : EditText?=null
-    private var debit : EditText?=null
-    private var elevasi : EditText?=null
-    private var tanggal : EditText?=null
-    private var keterangan : EditText?=null
+    private var wp : TextView?=null
+    private var shift : TextView?=null
+    private var status : TextView?=null
+    private var hm : TextView?=null
+    private var rpm : TextView?=null
+    private var fuel : TextView?=null
+    private var engine : TextView?=null
+    private var preasure : TextView?=null
+    private var debit : TextView?=null
+    private var elevasi : TextView?=null
+    private var tanggal : TextView?=null
+    private var keterangan : TextView?=null
 
     private var edit: Button?=null
     private var hapus: Button?=null
@@ -50,26 +50,24 @@ class HapusReportActivity : AppCompatActivity(), View.OnClickListener {
         id=intent.getStringExtra(RetrofitClient.WP_ID)
 
 //        id_id=findViewById(R.id.tampil_id)as EditText
-        wp      =findViewById(R.id.hapus_wp)as EditText
-        shift   =findViewById(R.id.hapus_shift)as EditText
-        status  =findViewById(R.id.hapus_status)as EditText
-        hm      =findViewById(R.id.hapus_hm)as EditText
-        rpm     =findViewById(R.id.hapus_rpm)as EditText
-        fuel    =findViewById(R.id.hapus_fuel)as EditText
-        engine  =findViewById(R.id.hapus_engine)as EditText
-        preasure=findViewById(R.id.hapus_preasure)as EditText
-        debit   =findViewById(R.id.hapus_debit)as EditText
-        elevasi =findViewById(R.id.hapus_elevasi)as EditText
-        tanggal =findViewById(R.id.hapus_tanggal)as EditText
-        keterangan =findViewById(R.id.hapus_keterangan)as EditText
+        wp      =findViewById(R.id.hapus_wp)as TextView?
+        shift   =findViewById(R.id.hapus_shift)as TextView?
+        status  =findViewById(R.id.hapus_status)as TextView?
+        hm      =findViewById(R.id.hapus_hm)as TextView?
+        rpm     =findViewById(R.id.hapus_rpm)as TextView?
+        fuel    =findViewById(R.id.hapus_fuel)as TextView?
+        engine  =findViewById(R.id.hapus_engine)as TextView?
+        preasure=findViewById(R.id.hapus_preasure)as TextView?
+        debit   =findViewById(R.id.hapus_debit)as TextView?
+        elevasi =findViewById(R.id.hapus_elevasi)as TextView?
+        tanggal =findViewById(R.id.hapus_tanggal) as TextView?
+        keterangan =findViewById(R.id.hapus_keterangan)as TextView?
 
         hapus   =findViewById(R.id.hapus_btnhapus)as Button
 
 
-//        edit!!.setOnClickListener(this)
         hapus!!.setOnClickListener(this)
 
-//        id_id!!.setText(id)
 
         getTampilWp()
     }
@@ -87,7 +85,6 @@ class HapusReportActivity : AppCompatActivity(), View.OnClickListener {
                 super.onPostExecute(re)
                 loading.dismiss()
                 showwp(re)
-////               Toast.makeText(this@TampilWpActivity, Toast.LENGTH_SHORT).show()
             }
 
             override fun doInBackground(vararg params: Void): String {

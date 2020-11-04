@@ -6,7 +6,7 @@
     android:background="@color/colorAccent"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".input.PushActivity">
+    tools:context=".towerlamp.ReportViewActivity">
     <LinearLayout
         android:orientation="vertical"
         android:gravity="center"
@@ -41,7 +41,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <TextView
-                android:id="@+id/pushTextTanggall"
+                android:id="@+id/reportTextTanggal"
                 android:hint="Tanggal"
                 android:layout_weight="1"
                 android:textSize="15sp"
@@ -49,7 +49,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
             <Button
-                android:id="@+id/push_tanggall"
+                android:id="@+id/report_tanggal"
                 android:text="pilih"
                 android:layout_weight="2"
                 android:layout_width="match_parent"
@@ -68,7 +68,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/textLampPush"
+                        android:id="@+id/textLampReport"
                         android:hint="TL"
                         android:textSize="15sp"
                         android:outlineProvider="bounds"
@@ -85,7 +85,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/textShiftPush"
+                        android:id="@+id/textShiftReport"
                         android:hint="SHIFT"
                         android:textSize="15sp"
                         android:maxLength="1"
@@ -101,7 +101,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/textStatusPush"
+                        android:id="@+id/textStatusReport"
                         android:hint="STATUS"
                         android:textSize="15sp"
                         android:maxLength="3"
@@ -123,7 +123,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/textHmPush"
+                        android:id="@+id/textHmReport"
                         android:hint="HM"
                         android:maxLength="3"
                         android:textSize="15sp"
@@ -139,7 +139,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/textFuelPush"
+                        android:id="@+id/textFuelReport"
                         android:hint="Fuel (%)"
                         android:textSize="15sp"
                         android:maxLength="3"
@@ -168,7 +168,7 @@
             <EditText
                 android:padding="3dp"
                 android:textColor="@color/black"
-                android:id="@+id/pushTextKeterangan"
+                android:id="@+id/ReportTextKeterangan"
                 android:background="@null"
                 android:maxLength="86"
                 android:layout_width="match_parent"
@@ -176,14 +176,14 @@
         </LinearLayout>
 
         <Button
-            android:id="@+id/button_push"
-            android:text="PUSH"
+            android:id="@+id/button_Tl_Edit"
+            android:text="EDIT"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
         <Button
-            android:id="@+id/button_tl_lihat"
-            android:text="LIHAT"
+            android:id="@+id/button_tl_Report"
+            android:text="HAPUS"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
     </LinearLayout>

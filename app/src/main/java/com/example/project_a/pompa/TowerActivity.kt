@@ -1,17 +1,16 @@
 package com.example.project_a.pompa
 
 import android.app.DatePickerDialog
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.DatePicker
 import android.widget.TextView
-import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.example.project_a.R
 import kotlinx.android.synthetic.main.activity_pompa.*
-import org.jetbrains.anko.db.insert
 import kotlinx.android.synthetic.main.activity_tower.*
+import org.jetbrains.anko.db.insert
 import org.jetbrains.anko.db.update
 import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.toast
@@ -132,7 +131,7 @@ class TowerActivity : AppCompatActivity() {
         })
     }
     private fun updateDataInView() {
-        val myFormat="dd MMM yy"
+        val myFormat = "yyyy/MM/dd"
         val sdf= SimpleDateFormat(myFormat, Locale.US)
         text_Tanggal!!.text=sdf.format(cal.getTime())
     }

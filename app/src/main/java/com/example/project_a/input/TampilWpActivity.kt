@@ -5,20 +5,17 @@ import android.app.ProgressDialog
 import android.content.DialogInterface
 import android.content.Intent
 import android.os.AsyncTask
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.example.project_a.R
 import com.example.project_a.RequestHandler
 import com.example.project_a.Retrofit.RetrofitClient
-import kotlinx.android.synthetic.main.activity_pompa.*
 import kotlinx.android.synthetic.main.activity_tampil_wp.*
-import kotlinx.android.synthetic.main.list_item.*
-import org.jetbrains.anko.AlertDialogBuilder
 import org.json.JSONException
 import org.json.JSONObject
 
@@ -106,8 +103,8 @@ class TampilWpActivity : AppCompatActivity(), View.OnClickListener {
     private fun showwp (json:String){
         try {
 ////            jsonObject = JSONObject(JSON_STRING)
-            val jsonObject=JSONObject(json)
-            val result = jsonObject.getJSONArray(RetrofitClient.TAG_JSON_ARRAY)
+            val jsonObjectt=JSONObject(json)
+            val result = jsonObjectt.getJSONArray(RetrofitClient.TL_JSON_ARRAY)
             val jo = result.getJSONObject(0)
 ////            val idd = jo.getString(RetrofitClient.TAG_ID)
             val wpp = jo.getString(RetrofitClient.TAG_WP)
@@ -156,7 +153,7 @@ class TampilWpActivity : AppCompatActivity(), View.OnClickListener {
 
             override fun onPostExecute(result: String?) {
                 super.onPostExecute(result)
-                loading.dismiss()
+//                loading.dismiss()
                 Toast.makeText(this@TampilWpActivity, result, Toast.LENGTH_LONG).show()
                 finish()
             }

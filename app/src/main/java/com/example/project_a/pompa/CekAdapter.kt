@@ -1,5 +1,7 @@
 package com.example.project_a.pompa
 
+//import com.example.project_a.input.InputSementaraActivity
+//import com.example.project_a.input.PushActivity
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
@@ -7,9 +9,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.project_a.R
 import com.example.project_a.p2h.PushCek
-//import com.example.project_a.input.InputSementaraActivity
-//import com.example.project_a.input.PushActivity
-import kotlinx.android.synthetic.main.item_list.view.*
 import kotlinx.android.synthetic.main.list_cek.view.*
 import org.jetbrains.anko.db.delete
 import org.jetbrains.anko.startActivity
@@ -29,19 +28,19 @@ class CekAdapter(val context: Context, val items: ArrayList<Cek>)
 
 
 
-//            itemView.cek_btnhapus.setOnClickListener {
-//
-//                itemView.context.database.use {
-//                    delete(
-//                        Cek.Tabel_Cek, "${Cek.ID}={id}",
-//                        "id" to items.id.toString()
-//                    )
-//
-//                }
-//
-//                itemView.context.toast("data dihapus")
-//                return@setOnClickListener
-//            }
+            itemView.cek_btnhapus.setOnClickListener {
+
+                itemView.context.database.use {
+                    delete(
+                        Cek.Tabel_Cek, "${Cek.ID}={id}",
+                        "id" to items.id.toString()
+                    )
+
+                }
+
+                itemView.context.toast("data dihapus")
+                return@setOnClickListener
+            }
 
 
 

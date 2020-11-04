@@ -11,16 +11,17 @@
         android:orientation="vertical"
         android:gravity="center"
         android:layout_width="match_parent"
-        android:layout_height="100dp">
+        android:layout_height="80dp">
 
         <TextView
-            android:text="PUSH"
+            android:text="Push P2H"
             android:textSize="25dp"
             android:textColor="@color/black"
             android:gravity="center"
             android:layout_gravity="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
+
         <TextView
             android:text="WATER PUMP"
             android:gravity="center"
@@ -31,138 +32,827 @@
 
     </LinearLayout>
     <LinearLayout
-        android:orientation="vertical"
-        android:padding="20dp"
-        android:background="@drawable/layer_inputwp"
         android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/layer_inputwp"
         android:layout_height="match_parent">
-
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <TextView
-                android:id="@+id/pushcekTanggal"
-                android:hint="Tanggal"
-                android:layout_weight="1"
-                android:textSize="15sp"
-                android:textColor="@color/colorPrimary"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-            <Button
-                android:id="@+id/pushcek_tanggal"
-                android:text="pilih"
-                android:layout_weight="2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-        </LinearLayout>
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <LinearLayout
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/pushcekPompa"
-                        android:hint="Pompa"
-                        android:textColor="@color/colorPrimary"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-                    </com.google.android.material.textfield.TextInputEditText>
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/pushcekShift"
-                        android:hint="Shift"
-                        android:textColor="@color/colorPrimary"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-                    </com.google.android.material.textfield.TextInputEditText>
-                </com.google.android.material.textfield.TextInputLayout>
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/pushcekHM"
-                        android:hint="HM"
-                        android:textColor="@color/colorPrimary"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-                    </com.google.android.material.textfield.TextInputEditText>
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/pushcekNama"
-                        android:hint="NAMA"
-                        android:textColor="@color/colorPrimary"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-                    </com.google.android.material.textfield.TextInputEditText>
-                </com.google.android.material.textfield.TextInputLayout>
-
-
-
-            </LinearLayout>
-
-        </LinearLayout>
-        <LinearLayout
-            android:background="@drawable/kotak_input"
             android:orientation="vertical"
-            android:padding="5dp"
+            android:padding="20dp"
             android:layout_width="match_parent"
-            android:layout_height="112dp">
-            <TextView
-                android:padding="3dp"
-                android:textColor="@color/black"
-                android:text="Keterangan :"
+            android:layout_height="wrap_content">
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-            <EditText
-                android:padding="3dp"
-                android:textColor="@color/black"
-                android:id="@+id/pushTextKeterangan"
-                android:background="@null"
-                android:maxLength="86"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/pushcekTanggal"
+                    android:hint="TANGGAL"
+                    android:layout_weight="1"
+                    android:textSize="10sp"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <Button
+                    android:id="@+id/pushcek_tanggal"
+                    android:textSize="10dp"
+                    android:text="PILIH"
+                    android:layout_weight="2"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/pushcekPompa"
+                            android:hint="POMPA"
+                            android:textSize="10sp"
+                            android:outlineProvider="bounds"
+                            android:maxLength="10"
+                            android:inputType="textCapCharacters"
+                            android:singleLine="true"
+                            android:textColor="@color/colorPrimary"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                        </com.google.android.material.textfield.TextInputEditText>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/pushcekShift"
+                            android:hint="SHIFT"
+                            android:textSize="10sp"
+                            android:maxLength="1"
+                            android:inputType="phone"
+                            android:singleLine="true"
+                            android:textColor="@color/colorPrimary"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                        </com.google.android.material.textfield.TextInputEditText>
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/pushcekHM"
+                            android:hint="HM"
+                            android:maxLength="6"
+                            android:textSize="10sp"
+                            android:inputType="phone"
+                            android:singleLine="true"
+                            android:textColor="@color/colorPrimary"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                        </com.google.android.material.textfield.TextInputEditText>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/pushcekNama"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:baselineAligned="false"
+                            android:hint="NAMA"
+                            android:inputType="textCapCharacters"
+                            android:maxLength="15"
+                            android:singleLine="true"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="10sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
         </LinearLayout>
-
-
-        <Button
-            android:id="@+id/buttoncek_push"
-            android:text="PUSH"
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content">
 
-        <Button
-            android:id="@+id/buttoncek_lihat"
-            android:text="LIHAT"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TableLayout
+                    android:padding="2dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="A. PEMERIKSAAN SEBELUM START"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <TableRow android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_weight="1"
+                            android:text="Level Oli Mesin"
+                            android:layout_marginLeft="15dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:text=""
+                            android:layout_marginRight="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <Spinner
+                            android:id="@+id/spiner1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/spiner" />
+                    </TableRow>
+
+                    <TableRow android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_weight="1"
+                            android:text="Level Oli Vacum Pump"
+                            android:layout_marginLeft="15dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:text=""
+                            android:layout_marginRight="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <Spinner
+                            android:id="@+id/spiner2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/spiner" />
+                    </TableRow>
+
+                    <TableRow android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_weight="1"
+                            android:text="Level Oli Bare Shaft"
+                            android:layout_marginLeft="15dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:text=""
+                            android:layout_marginRight="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <Spinner
+                            android:id="@+id/spiner3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/spiner" />
+                    </TableRow>
+
+                    <TableRow android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_weight="1"
+                            android:text="Bolt Pengikat Bare Shaft"
+                            android:layout_marginLeft="15dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:text=""
+                            android:layout_marginRight="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <Spinner
+                            android:id="@+id/spiner4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/spiner" />
+                    </TableRow>
+
+                    <TableRow android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_weight="1"
+                            android:text="Bolt Pengikat Vacum Pump"
+                            android:layout_marginLeft="15dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:text=""
+                            android:layout_marginRight="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <Spinner
+                            android:id="@+id/spiner5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/spiner" />
+                    </TableRow>
+
+                    <TableRow android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_weight="1"
+                            android:text="Bolt Pengikat Gland Packing"
+                            android:layout_marginLeft="15dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:text=""
+                            android:layout_marginRight="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <Spinner
+                            android:id="@+id/spiner6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/spiner" />
+                    </TableRow>
+
+                    <TableRow android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_weight="1"
+                            android:text="Level Air Radiator"
+                            android:layout_marginLeft="15dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:text=""
+                            android:layout_marginRight="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <Spinner
+                            android:id="@+id/spiner7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/spiner" />
+                    </TableRow>
+
+                    <TableRow android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_weight="1"
+                            android:text="Level Air Battery dan Cable Battery"
+                            android:layout_marginLeft="15dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:text=""
+                            android:layout_marginRight="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <Spinner
+                            android:id="@+id/spiner8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/spiner" />
+                    </TableRow>
+
+                    <TableRow android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_weight="1"
+                            android:text="Level Solar"
+                            android:layout_marginLeft="15dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:text=""
+                            android:layout_marginRight="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <Spinner
+                            android:id="@+id/spiner9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/spiner" />
+                    </TableRow>
+
+                    <TableRow android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_weight="1"
+                            android:text="Rubber Coupling Mesin"
+                            android:layout_marginLeft="15dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:text=""
+                            android:layout_marginRight="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <Spinner
+                            android:id="@+id/spiner10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/spiner" />
+                    </TableRow>
+
+                    <TableRow android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_weight="1"
+                            android:text="Kekencangan V-Belt"
+                            android:layout_marginLeft="15dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:text=""
+                            android:layout_marginRight="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <Spinner
+                            android:id="@+id/spiner11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/spiner" />
+                    </TableRow>
+
+                    <TableRow android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_weight="1"
+                            android:text="Kondisi Guard Fan"
+                            android:layout_marginLeft="15dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:text=""
+                            android:layout_marginRight="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <Spinner
+                            android:id="@+id/spiner12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/spiner" />
+                    </TableRow>
+
+                    <TableRow android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_weight="1"
+                            android:text="Rubber Mounting Engine"
+                            android:layout_marginLeft="15dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:text=""
+                            android:layout_marginRight="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <Spinner
+                            android:id="@+id/spiner13"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/spiner" />
+                    </TableRow>
+
+                    <TableRow android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_weight="1"
+                            android:text="Rubber Mounting Compresor"
+                            android:layout_marginLeft="15dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:text=""
+                            android:layout_marginRight="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <Spinner
+                            android:id="@+id/spiner14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/spiner" />
+                    </TableRow>
+
+                    <TableRow android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_weight="1"
+                            android:text="Radiator dan Hose Radiator"
+                            android:layout_marginLeft="15dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:text=""
+                            android:layout_marginRight="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <Spinner
+                            android:id="@+id/spiner15"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/spiner" />
+                    </TableRow>
+
+                    <TableRow android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_weight="1"
+                            android:text="Air Cleaner dan Bracket"
+                            android:layout_marginLeft="15dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:text=""
+                            android:layout_marginRight="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <Spinner
+                            android:id="@+id/spiner16"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/spiner" />
+                    </TableRow>
+
+                    <TableRow android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_weight="1"
+                            android:text="Muffler dan Bolt Mounting"
+                            android:layout_marginLeft="15dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:text=""
+                            android:layout_marginRight="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <Spinner
+                            android:id="@+id/spiner17"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/spiner" />
+                    </TableRow>
+
+                    <TableRow android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_weight="1"
+                            android:text="Hand Rail"
+                            android:layout_marginLeft="15dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:text=""
+                            android:layout_marginRight="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <Spinner
+                            android:id="@+id/spiner18"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/spiner" />
+                    </TableRow>
+
+                    <TableRow android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_weight="1"
+                            android:text="Kebersihan Engine, Radiator, Pump"
+                            android:layout_marginLeft="15dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:text=""
+                            android:layout_marginRight="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <Spinner
+                            android:id="@+id/spiner19"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/spiner" />
+                    </TableRow>
+
+                    <TableRow android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_weight="1"
+                            android:text="Hook"
+                            android:layout_marginLeft="15dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:text=""
+                            android:layout_marginRight="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <Spinner
+                            android:id="@+id/spiner20"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/spiner" />
+                    </TableRow>
+
+                    <TableRow android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_weight="1"
+                            android:text="Kebocoran/Kemiringan Ponton"
+                            android:layout_marginLeft="15dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:text=""
+                            android:layout_marginRight="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <Spinner
+                            android:id="@+id/spiner21"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/spiner" />
+                    </TableRow>
+
+                    <TableRow android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_weight="1"
+                            android:text="Tutup (fuel, bare shaft, vacum)"
+                            android:layout_marginLeft="15dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:text=""
+                            android:layout_marginRight="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <Spinner
+                            android:id="@+id/spiner22"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/spiner" />
+                    </TableRow>
+
+                    <TableRow android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_weight="1"
+                            android:text="Check Kebocoran Oil, Solar, dan Air"
+                            android:layout_marginLeft="15dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:text=""
+                            android:layout_marginRight="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <Spinner
+                            android:id="@+id/spiner23"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/spiner" />
+                    </TableRow>
+
+                    <TableRow android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_weight="1"
+                            android:text="Kondisi APAR"
+                            android:layout_marginLeft="15dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:text=""
+                            android:layout_marginRight="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <Spinner
+                            android:id="@+id/spiner24"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/spiner" />
+                    </TableRow>
+
+                    <TableRow android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="205dp"
+                            android:layout_height="24dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_weight="1"
+                            android:text="Lampu Rotari" />
+                        <TextView
+                            android:text=""
+                            android:layout_marginRight="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <Spinner
+                            android:id="@+id/spiner25"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/spiner" />
+                    </TableRow>
+
+                    ________________________________________________________________________________________________________________________________________________________________________>
+
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:text="B. PEMERIKSAAN SETELAH UNIT START"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TableRow android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_weight="1"
+                            android:text="Noise/Suara Engine/Pompa"
+                            android:layout_marginLeft="15dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:text=""
+                            android:layout_marginRight="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <Spinner
+                            android:id="@+id/spiner26"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/spiner" />
+                    </TableRow>
+
+                    <TableRow android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_weight="1"
+                            android:text="Level Unit Pump Diatas Air"
+                            android:layout_marginLeft="15dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:text=""
+                            android:layout_marginRight="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <Spinner
+                            android:id="@+id/spiner27"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/spiner" />
+                    </TableRow>
+
+                    <TableRow android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_weight="1"
+                            android:text="Gauge Panel Oil Preassure"
+                            android:layout_marginLeft="15dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:text=""
+                            android:layout_marginRight="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <Spinner
+                            android:id="@+id/spiner28"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/spiner" />
+                    </TableRow>
+
+                    <TableRow android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_weight="1"
+                            android:text="Gauge Panel Water Temperatur"
+                            android:layout_marginLeft="15dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:text=""
+                            android:layout_marginRight="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <Spinner
+                            android:id="@+id/spiner29"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/spiner" />
+                    </TableRow>
+
+                    <TableRow android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_weight="1"
+                            android:text="Kebocoran Oli, Air, dan Solar"
+                            android:layout_marginLeft="15dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:text=""
+                            android:layout_marginRight="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <Spinner
+                            android:id="@+id/spiner30"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/spiner" />
+                    </TableRow>
+
+                    <TableRow android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_weight="1"
+                            android:text="Charging System"
+                            android:layout_marginLeft="15dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:text=""
+                            android:layout_marginRight="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <Spinner
+                            android:id="@+id/spiner31"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/spiner" />
+                    </TableRow>
+
+
+                    <TableRow android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10dp">
+                        <TextView
+                            android:layout_weight="1"
+                            android:text="Kondisi Base Sump (Rata/Beda Tinggi)"
+                            android:layout_marginLeft="15dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:text=""
+                            android:layout_marginRight="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <Spinner
+                            android:id="@+id/spiner32"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/spiner" />
+                    </TableRow>
+                    <LinearLayout
+                        android:paddingRight="10dp"
+                        android:paddingLeft="10dp"
+                        android:background="@drawable/kotak_input"
+                        android:orientation="vertical"
+                        android:padding="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="112dp">
+                        <TextView
+                            android:padding="3dp"
+                            android:textColor="@color/black"
+                            android:text="Keterangan :"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <EditText
+                            android:padding="3dp"
+                            android:textColor="@color/black"
+                            android:id="@+id/pushTextKeterangan"
+                            android:background="@null"
+                            android:maxLength="86"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <Button
+                        android:paddingBottom="30dp"
+                        android:text="SIMPAN"
+                        android:id="@+id/buttoncek_push"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <Button
+                        android:paddingBottom="30dp"
+                        android:text="LIHAT"
+                        android:id="@+id/buttoncek_lihat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </TableLayout>
+
+            </ScrollView>
+        </LinearLayout>
     </LinearLayout>
-
-
 </LinearLayout>

@@ -6,14 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.project_a.R
-import com.example.project_a.input.PushActivity
 import com.example.project_a.towerlamp.PushLamp
-import kotlinx.android.synthetic.main.item_list.view.*
 import kotlinx.android.synthetic.main.list_lamp.view.*
 import org.jetbrains.anko.db.delete
 import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.toast
-import com.example.project_a.pompa.TowerAdapter.ViewHolder as ViewHolder1
 
 class TowerAdapter(val context: Context, val item: ArrayList<Tower>)
     : RecyclerView.Adapter<TowerAdapter.ViewHolder>() {

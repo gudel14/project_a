@@ -37,9 +37,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
 
-                    <EditText
+                    <TextView
                         android:id="@+id/hapus_tanggal"
-                        android:hint="tanggal"
+                        android:hint="Tanggal"
                         android:textColor="@color/colorPrimary"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
@@ -60,9 +60,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
 
-                    <EditText
+                    <TextView
                         android:id="@+id/hapus_wp"
-                        android:hint="pompa"
+                        android:hint="Pompa"
                         android:textColor="@color/colorPrimary"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
@@ -82,9 +82,9 @@
                         android:layout_marginRight="3dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
-                    <EditText
+                    <TextView
                         android:id="@+id/hapus_shift"
-                        android:hint="shift"
+                        android:hint="Shift"
                         android:textColor="@color/colorPrimary"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
@@ -104,9 +104,9 @@
                         android:layout_marginRight="3dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
-                    <EditText
+                    <TextView
                         android:id="@+id/hapus_status"
-                        android:hint="status"
+                        android:hint="Status"
                         android:textColor="@color/colorPrimary"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
@@ -126,9 +126,9 @@
                         android:layout_marginRight="3dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
-                    <EditText
+                    <TextView
                         android:id="@+id/hapus_hm"
-                        android:hint="hm"
+                        android:hint="HM"
                         android:textColor="@color/colorPrimary"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
@@ -147,9 +147,9 @@
                         android:layout_marginRight="3dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
-                    <EditText
+                    <TextView
                         android:id="@+id/hapus_rpm"
-                        android:hint="rpm"
+                        android:hint="RPM"
                         android:textColor="@color/colorPrimary"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
@@ -183,9 +183,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
 
-                    <EditText
+                    <TextView
                         android:id="@+id/hapus_fuel"
-                        android:hint="fuel"
+                        android:hint="Fuel Rate"
                         android:textColor="@color/colorPrimary"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
@@ -206,9 +206,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
 
-                    <EditText
+                    <TextView
                         android:id="@+id/hapus_engine"
-                        android:hint="engine"
+                        android:hint="Engine Load"
                         android:textColor="@color/colorPrimary"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
@@ -228,9 +228,9 @@
                         android:layout_marginRight="3dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
-                    <EditText
+                    <TextView
                         android:id="@+id/hapus_preasure"
-                        android:hint="preasure"
+                        android:hint="Preasure"
                         android:textColor="@color/colorPrimary"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
@@ -250,9 +250,9 @@
                         android:layout_marginRight="3dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
-                    <EditText
+                    <TextView
                         android:id="@+id/hapus_debit"
-                        android:hint="debit"
+                        android:hint="Debit"
                         android:textColor="@color/colorPrimary"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
@@ -272,7 +272,7 @@
                         android:layout_marginRight="3dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
-                    <EditText
+                    <TextView
                         android:id="@+id/hapus_elevasi"
                         android:hint="Elevasi"
                         android:textColor="@color/colorPrimary"

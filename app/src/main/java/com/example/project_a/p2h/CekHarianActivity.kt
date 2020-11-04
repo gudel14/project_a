@@ -1,14 +1,15 @@
 package com.example.project_a.p2h
 
 import android.app.DatePickerDialog
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.DatePicker
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import com.example.project_a.R
-import com.example.project_a.pompa.*
+import com.example.project_a.pompa.Cek
+import com.example.project_a.pompa.database
 import kotlinx.android.synthetic.main.activity_cek_harian.*
 import org.jetbrains.anko.db.insert
 import org.jetbrains.anko.startActivity
@@ -76,7 +77,39 @@ class CekHarianActivity : AppCompatActivity() {
                 Cek.SHIFT to cektextShift.text.toString(),
                 Cek.NAMA to cektextNama.text.toString(),
                 Cek.HM to cektextHm.text.toString(),
-                Cek.TANGGAL to cektextTanggal!!.text.toString()
+                Cek.TANGGAL to cektextTanggal!!.text.toString(),
+                Cek.SPINER1  to spiner1.selectedItem.toString(),
+                Cek.SPINER2  to spiner2.selectedItem.toString(),
+                Cek.SPINER3  to spiner3.selectedItem.toString(),
+                Cek.SPINER4  to spiner4.selectedItem.toString(),
+                Cek.SPINER5  to spiner5.selectedItem.toString(),
+                Cek.SPINER6  to spiner6.selectedItem.toString(),
+                Cek.SPINER7  to spiner7.selectedItem.toString(),
+                Cek.SPINER8  to spiner8.selectedItem.toString(),
+                Cek.SPINER9  to spiner9.selectedItem.toString(),
+                Cek.SPINER10 to spiner10.selectedItem.toString(),
+                Cek.SPINER11 to spiner11.selectedItem.toString(),
+                Cek.SPINER12 to spiner12.selectedItem.toString(),
+                Cek.SPINER13 to spiner13.selectedItem.toString(),
+                Cek.SPINER14 to spiner14.selectedItem.toString(),
+                Cek.SPINER15 to spiner15.selectedItem.toString(),
+                Cek.SPINER16 to spiner16.selectedItem.toString(),
+                Cek.SPINER17 to spiner17.selectedItem.toString(),
+                Cek.SPINER18 to spiner18.selectedItem.toString(),
+                Cek.SPINER19 to spiner19.selectedItem.toString(),
+                Cek.SPINER20 to spiner20.selectedItem.toString(),
+                Cek.SPINER21 to spiner21.selectedItem.toString(),
+                Cek.SPINER22 to spiner22.selectedItem.toString(),
+                Cek.SPINER23 to spiner23.selectedItem.toString(),
+                Cek.SPINER24 to spiner24.selectedItem.toString(),
+                Cek.SPINER25 to spiner25.selectedItem.toString(),
+                Cek.SPINER26 to spiner26.selectedItem.toString(),
+                Cek.SPINER27 to spiner27.selectedItem.toString(),
+                Cek.SPINER28 to spiner28.selectedItem.toString(),
+                Cek.SPINER29 to spiner29.selectedItem.toString(),
+                Cek.SPINER30 to spiner30.selectedItem.toString(),
+                Cek.SPINER31 to spiner31.selectedItem.toString(),
+                Cek.SPINER32 to spiner32.selectedItem.toString()
             )
             toast("Data Disimpan")
         }

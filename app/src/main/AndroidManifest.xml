@@ -11,12 +11,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".p2h.Show_cek"></activity>
+        <activity android:name=".towerlamp.ReportFinalActivity"/>
+        <activity android:name=".towerlamp.ReportViewActivity" />
+        <activity android:name=".towerlamp.ReportActivity" />
+        <activity android:name=".towerlamp.HapusLampActivity" />
+        <activity android:name=".p2h.Show_cek" />
         <activity android:name=".p2h.PushCek" />
         <activity android:name=".p2h.CekCekActivity" />
-        <activity android:name=".p2h.CekHarianActivity">
-
-        </activity>
+        <activity android:name=".p2h.CekHarianActivity" />
         <activity android:name=".towerlamp.LihatLampActivity" />
         <activity android:name=".towerlamp.PushLamp" />
         <activity android:name=".pompa.Tower2Activity" />
@@ -27,18 +29,13 @@
         <activity android:name=".input.PushActivity" />
         <activity android:name=".nav_pompa.NavActivity" />
         <activity android:name=".pompa.Pompa2Activity" />
-        <activity
-            android:name=".pompa.PompaActivity"
+        <activity android:name=".pompa.PompaActivity"
             android:windowSoftInputMode="adjustResize" />
         <activity android:name=".input.TampilWpActivity" />
         <activity android:name=".input.TampilSemuaWpActivity" />
         <activity android:name=".input.Input_Activity" />
         <activity android:name=".Dashboard_Activity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".Daftar_Activity"
@@ -46,8 +43,13 @@
         <activity
             android:name=".LoginActivity"
             android:windowSoftInputMode="adjustResize" />
-        <activity android:name=".Splash_Activity" />
+        <activity android:name=".Splash_Activity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".MainActivity" />
     </application>
-
 </manifest>

@@ -3,15 +3,14 @@ package com.example.project_a
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import com.example.project_a.input.Input_Activity
-import com.example.project_a.input.ReportPompaActivity
+import androidx.appcompat.app.AppCompatActivity
 import com.example.project_a.input.TampilSemuaWpActivity
 import com.example.project_a.p2h.CekHarianActivity
 import com.example.project_a.pompa.PompaActivity
 import com.example.project_a.pompa.TowerActivity
+import com.example.project_a.towerlamp.ReportActivity
 import kotlinx.android.synthetic.main.dashboard_activity.*
 
 class Dashboard_Activity : AppCompatActivity() {
@@ -33,6 +32,10 @@ class Dashboard_Activity : AppCompatActivity() {
 
         card_tl.setOnClickListener {
             startActivity(Intent(this, TowerActivity::class.java))
+        }
+
+        card_report_tl.setOnClickListener {
+            startActivity(Intent(this, ReportActivity::class.java))
         }
 
         card_tentang.setOnClickListener {

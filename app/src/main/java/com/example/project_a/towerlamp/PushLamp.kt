@@ -4,21 +4,17 @@ import android.app.DatePickerDialog
 import android.app.ProgressDialog
 import android.content.Intent
 import android.os.AsyncTask
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.DatePicker
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.example.project_a.R
 import com.example.project_a.RequestHandler
 import com.example.project_a.Retrofit.RetrofitClient
-import com.example.project_a.input.ShowReportPompaActivity
-import kotlinx.android.synthetic.main.activity_push.*
 import kotlinx.android.synthetic.main.activity_push_lamp.*
-import kotlinx.android.synthetic.main.activity_push_lamp.button_push
-import kotlinx.android.synthetic.main.activity_tower.*
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -32,8 +28,8 @@ class PushLamp : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_push_lamp)
 
-        pushTanggal = findViewById(R.id.pushTextTanggal) as TextView
-        btnPushTanggal = findViewById(R.id.push_tanggal) as Button
+        pushTanggal = findViewById(R.id.pushTextTanggall) as TextView
+        btnPushTanggal = findViewById(R.id.push_tanggall) as Button
 
 
         var oldlamp     = intent.getStringExtra("oldlamp")
@@ -44,13 +40,13 @@ class PushLamp : AppCompatActivity() {
         var oldfuel      = intent.getStringExtra("oldfuel")
 
         if (oldlamp.isNullOrBlank()) {
-            tlbutton_update.isEnabled = false
+//            tlbutton_update.isEnabled = false
         } else {
             textShiftPush.isEnabled= false
             textHmPush.isEnabled= false
             textFuelPush.isEnabled= false
             textStatusPush.isEnabled= false
-            pushTextTanggal.isEnabled= false
+            pushTextTanggall.isEnabled= false
             textLampPush.isEnabled= false
 
             textLampPush.setText(oldlamp)
@@ -58,7 +54,7 @@ class PushLamp : AppCompatActivity() {
             textHmPush.setText(oldhm)
             textFuelPush.setText(oldfuel)
             textStatusPush.setText(oldstatus)
-            pushTextTanggal.setText(oldtanggal)
+            pushTextTanggall.setText(oldtanggal)
 
             button_push.setOnClickListener {
                 addTl()
@@ -107,7 +103,7 @@ class PushLamp : AppCompatActivity() {
         val status = textStatusPush?.getText().toString().trim(){ it <= ' ' }
         val hm = textHmPush?.getText().toString().trim(){ it <= ' ' }
         val fuel = textFuelPush?.getText().toString().trim(){ it <= ' ' }
-        val tanggal = pushTextTanggal?.getText().toString().trim(){ it <= ' ' }
+        val tanggal = pushTextTanggall?.getText().toString().trim(){ it <= ' ' }
 
         lateinit var loading: ProgressDialog
 

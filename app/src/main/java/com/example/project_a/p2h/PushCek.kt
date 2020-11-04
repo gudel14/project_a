@@ -3,9 +3,9 @@ package com.example.project_a.p2h
 import android.app.ProgressDialog
 import android.content.Intent
 import android.os.AsyncTask
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.example.project_a.R
 import com.example.project_a.RequestHandler
 import com.example.project_a.Retrofit.RetrofitClient
@@ -21,8 +21,6 @@ class PushCek : AppCompatActivity() {
         var oldnama = getIntent().getStringExtra("oldceknama")
         var oldhm = getIntent().getStringExtra("oldcekhm")
         var oldtanggal = getIntent().getStringExtra("oldcektanggal")
-
-
 
 
         pushcekPompa.setText(oldpompa)
@@ -72,6 +70,8 @@ class PushCek : AppCompatActivity() {
                 params[RetrofitClient.KEY_CEK_nama] = nama
                 params[RetrofitClient.KEY_CEK_hm] = hm
                 params[RetrofitClient.KEY_CEK_tanggal] = tanggal
+
+
 //                params[RetrofitClient.KEY_WP_keterangan] = keterangan
 
                 val rh = RequestHandler()

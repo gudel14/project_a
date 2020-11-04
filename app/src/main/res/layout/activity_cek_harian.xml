@@ -115,7 +115,7 @@
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/cektextHm"
                         android:hint="HM"
-                        android:maxLength="3"
+                        android:maxLength="6"
                         android:textSize="10sp"
                         android:inputType="phone"
                         android:singleLine="true"
@@ -135,13 +135,11 @@
                         android:layout_height="wrap_content"
                         android:baselineAligned="false"
                         android:hint="NAMA"
-                        android:inputType="phone"
-                        android:maxLength="3"
+                        android:inputType="textCapCharacters"
+                        android:maxLength="15"
                         android:singleLine="true"
                         android:textColor="@color/colorPrimary"
-                        android:textSize="10sp">
-
-                    </com.google.android.material.textfield.TextInputEditText>
+                        android:textSize="10sp" />
                 </com.google.android.material.textfield.TextInputLayout>
 
             </LinearLayout>
@@ -841,14 +839,14 @@ ________________________________________________________________________________
                     </LinearLayout>
                     <Button
                         android:paddingBottom="30dp"
-                        android:text="KIRIM"
+                        android:text="SIMPAN"
                         android:id="@+id/cekbtn_kirim"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
 
                     <Button
                         android:paddingBottom="30dp"
-                        android:text="lihat"
+                        android:text="LIHAT"
                         android:id="@+id/cekbtn_lihat"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>

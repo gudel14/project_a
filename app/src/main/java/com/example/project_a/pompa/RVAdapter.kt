@@ -52,6 +52,7 @@ class RVAdapter(val context: Context, val items: ArrayList<Pompa>)
 
             itemView.update_btnhapus.setOnClickListener {
 
+
                 itemView.context.database.use {
                     delete(
                         Pompa.Tabel_Pompa, "${Pompa.ID}={id}",
@@ -98,6 +99,5 @@ class RVAdapter(val context: Context, val items: ArrayList<Pompa>)
         holder.bindItem(items[position])
     }
     //--------------------------------------------
-
 
 }
